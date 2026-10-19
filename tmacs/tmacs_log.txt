@@ -1,1 +1,1 @@
-years ['2025', '2024', '2023', '2022', '2021', '2020', '2019', '2018', '2017', '2016', '2015'] rows 3657 keys ['CAR', 'CAR1', 'CNT', 'CNT1', 'CRT_JIJACE_CD', 'CRT_JIJACE_NM', 'DIST', 'DIST1', 'GBN', 'GRD', 'LOAD1', 'MEN', 'MEN1', 'ROAD', '_sido', '_sidocd', '_stand', '_year']
+years ['2025', '2024', '2023', '2022', '2021', '2020', '2019', '2018', '2017', '2016', '2015'] rows 4830 failed 0 [] keys ['CAR', 'CAR1', 'CNT', 'CNT1', 'CRT_JIJACE_CD', 'CRT_JIJACE_NM', 'DIST', 'DIST1', 'GBN', 'GRD', 'LOAD1', 'MEN', 'MEN1', 'ROAD', '_sido', '_sidocd', '_stand', '_year']
