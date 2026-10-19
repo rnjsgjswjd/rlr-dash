@@ -1,0 +1,3216 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="kr" xml:lang="kr">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width,height=device-height, minumum-scale=0.2,  user-scalable=yes">    
+    <META NAME="robots" CONTENT="noindex, nofollow" />
+    <title>지자체별 > 지자체 교통안전 > 교통안전정보관리시스템</title>
+    
+
+
+<link rel="stylesheet" type="text/css" href="/css/css_new/tmacs_v1.css" />
+<link rel="stylesheet" type="text/css" href="/css/css_new/common_v1.css" />
+<link rel="stylesheet" type="text/css" href="/css/css_new/font_v1.css" />
+<link rel="stylesheet" type="text/css" href="/css/css_new/navi_v1.css" />
+<link rel="stylesheet" type="text/css" href="/css/css_new/slick_v1.css" />
+<link rel="stylesheet" type="text/css" href="/css/css_new/slick-theme_v1.css" />    
+<link rel="stylesheet" type="text/css" href="/css/css_new/Material-Icons.css" />
+<link rel="stylesheet" type="text/css" href="/css/css_new/layout.css" />
+<link rel="stylesheet" type="text/css" href="/css/css_new/style.css" />    
+<link rel="stylesheet" type="text/css" href="/css/css_new/board.css" />
+<link rel="stylesheet" type="text/css" href="/css/css_new/sub.css?v=202610192154" />
+
+<script type="text/javascript" src="/js/jquery-1.12.0.js"></script> 
+<script type="text/javascript" src="/js/jquery/ui/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/js/common.js"></script>
+<script type="text/javascript" src="/js/fullpage.js"></script>
+<script type="text/javascript" src="/js/navi.js"></script>
+<script src="/js/slick.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="/js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="/js/design.js"></script>
+<script type="text/javascript" src="/js/new/common.js"></script>
+<script type="text/javascript" src="/js/utils.js"></script>
+<script type="text/javascript" src="/js/jquery.bpopup.js"></script>
+
+<style type="text/css">
+
+.skipnavi {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 200px;
+	padding: 5px 0;
+	text-align: center;
+	text-indent: 0px;
+	font-size: 0px;
+	color: #ffffff;
+	background-color: #ffffff;
+	z-index:9999;
+}
+
+.skipnavi a:active,
+.skipnavi a:focus{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	display: block;
+	width: 200px;
+	padding: 5px 0;
+	text-align: center;
+	text-indent: 0px;
+	font-size: 12px;
+	font-weight: bold;
+	background-color: #f2f2f2;
+}
+
+</style>
+    <link rel="stylesheet" type="text/css" href="/rMateGridH5/Assets/rMateH5.css"/>
+    <link rel="stylesheet" type="text/css" href="/rMateChartH5/Assets/Css/rMateChartH5.css"/>
+    <link rel="stylesheet" type="text/css" href="/rMateChartH5/Web/sample.css"/>
+    
+
+	<!-- 그리드 컴포넌트 관련 js파일  start-->
+	<script type="text/javascript" src="/js/TG/tgContent.js"></script><!--  추가  해야함  -->
+	<script type="text/javascript" src="/js/TG/tgUtil2.js"></script> 
+	<script type="text/javascript" src="/js/httpRequest.js"></script> 
+	<script type="text/javascript" src="/rMateGridH5/JS/jszip.min.js"></script>
+
+	<!-- rMateGrid 라이센스 및 js라이브러리 -->
+	<script type="text/javascript" src="/LicenseKey/rMateGridH5License.js"></script>
+	<script type="text/javascript" src="/rMateGridH5/JS/rMateGridH5.js" charset="utf-8" ></script>
+	
+	<!-- rMateChart 라이센스 및 js라이브러리 -->
+	<script language="javascript" type="text/javascript" src="/LicenseKey/rMateChartH5License.js"></script>
+	<script type="text/javascript" src="/rMateChartH5/JS/rMateChartH5.js" charset="utf-8"></script>
+	<!-- 그리드 컴포넌트 관련 js파일 end -->
+	
+	<!-- rMateChartH5 테마 js -->
+	<script type="text/javascript" src="/rMateChartH5/Assets/Theme/theme.js"></script>	
+
+	<!-- 그리드 컴포넌트 관련 js파일  end-->
+
+
+
+	<!-- Rexpert UI 공통함수 -->
+	<script language="javascript" src="/RexServer30/rexscript/rexpert.js"></script>
+	<script language="javascript" src="/RexServer30/rexscript/rexpert_properties.js"></script>
+	<script language="javascript" src="/js/rexpert_open.js"></script>
+	<!-- Rexpert UI 공통함수 -->
+
+<script type="text/javascript" src="/js/utils.js"></script>
+
+<script type="text/javascript">
+
+// ----------------------- rMateGrid flashVars 설정 시작 -----------------------
+ 
+	// rMateGrid 레이아웃 URL 경로. 반드시 설정하십시오.
+	
+	var layoutURL = "/web/TG/TG200/TG2100/LayOut/Tg2114_LayOutXml.jsp?stand=all&width=75"
+	//var flashVars = "layoutURL="+layoutURL;
+	var jsVars = "layoutURL="+layoutURL;
+	// 데이타가 JSON형일 경우 넣어줍니다. (설정을 안할경우 xml로 인식하여 오류가 발생합니다)
+	jsVars += "&dataType=json";
+	jsVars += "&localeChain=en-US";
+		
+	var gridApp;	// 그리드 rMateGridH5 기초 div
+	var gridRoot;	// 데이타와 그리드를 포함하는 객체
+	var dataGrid;   // rMateGrid가 로딩된 후 불려지는 함수
+	var imageColumn; // 그리드 내 이미지 버튼 클릭 관련 함수
+	var gridData  = ""; 	//JSON형식의 데이터를 받을 변수. 
+    //flashVars += "&dataType=json";
+    //flashVars += "&bridgeName=gridBridge";
+
+    var gridReadyHandler = function(id) {
+			gridApp = document.getElementById(id);
+			gridRoot = gridApp.getRoot();
+		    
+		   	var menuItemSelectHandler = function(event) {
+		  		contextMenuHandler(event.menuItemCaption);
+		   	};
+	
+		   	var layoutCompleteHandler = function(event) {
+		   		dataGrid = gridRoot.getDataGrid();
+		   		dataGrid.addEventListener("menuItemSelect", menuItemSelectHandler);
+		   		
+		   	};
+		   	gridRoot.addEventListener("layoutComplete", layoutCompleteHandler);    	
+		};
+        jsVars += "&rMateOnLoadCallFunction=gridReadyHandler";
+		
+		// ----------------------- rMateGrid flashVars 설정 끝 -----------------------
+
+	
+
+	
+
+//<![CDATA[
+	function init(){	
+		//rMateGridInit();	
+		//fn_initmenuOpen('','' );
+	}
+	
+	function onMove(){	
+		var sido = document.getElementById("sido").value;
+		var stand = document.getElementById("stand").value;
+		var sYear = document.getElementById("std_year").value;
+		var eYear = document.getElementById("end_year").value;
+		var jijace_cls = document.getElementById("jijacecls").value;
+		
+		Temp = eYear - sYear;
+		
+		if(Temp<0){
+			alert("시작년도는 종료년도보다 작아야 합니다.");
+			return;
+		}
+		
+		var standNm = '';
+		
+		if(stand=='death'){
+		
+			standNm = '사망\n자수';
+		
+		}else if(stand=='serious'){
+		
+			standNm = '중상\n자수';
+		
+		}else{
+			standNm = '사상\n자수';
+		}
+				 
+	
+		var gridColumn = dataGrid.getColumns()[2];
+		gridColumn.setHeaderText(standNm);
+	    
+		
+		setCondition(); // 조회조건 보여주는 함수
+		
+		showLoading(dataGrid, gridRoot);
+		
+		var url  = '/web/TG/TG200/TG2100/Tg2114_AJAX.jsp';
+		
+		inputchk2(sido);
+		inputchk2(stand);
+		inputchk2(sYear);
+		inputchk2(eYear);
+		inputchk2(jijace_cls);
+		
+		var params ="mid=S1894&sido="+sido+"&stand="+stand+"&sYear="+sYear+"&eYear="+eYear+"&jijace_cls="+jijace_cls;
+		
+		
+		gridRoot.removeAll();
+		
+		sendRequest(url,params,selectState,"POST");	
+		
+
+	}
+	
+	//Callback함수 호출
+	function selectState(){
+		if(xmlHttp.readyState == 4) {  
+	        if(xmlHttp.status == 200) { 	//완료 상태	
+				exeAjax(xmlHttp);
+				hideLoading(dataGrid, gridRoot);
+	        }
+	    }
+	}
+	
+	// 출력
+	function exeAjax(xmlHttp){		
+		var resValue = xmlHttp.responseText;
+		gridData = resValue; //JSON형식 데이터를 gridData변수에 할당.
+		
+		gridData = trim(gridData);
+		
+		if(gridData=="error"){
+			alert("에러가 발생했습니다.");
+			document.getElementById('loadM').style.display = 'none';
+			return;
+		}
+		
+		if(gridData=="[]"){
+		
+			alert("데이터가 없습니다.");
+			document.getElementById('loadM').style.display = 'none';
+			return;
+		
+		}
+		
+		gridApp.setData(gridData);
+		document.getElementById('loadM').style.display = 'none';
+		var sourceBox = document.getElementById('sourceBox');
+		if(sourceBox != null){
+			sourceBox.style.display = 'block';
+		}
+		
+		document.getElementById("div_chart").style.display = 'none';
+		
+	}
+	
+    /** ContextMenu관련 함수.
+     * 수정일자 : 2020.11.27
+     * 작업자 : 신재석
+     */
+   function contextMenuHandler(caption) {
+       if (caption == "엑셀 다운받기") {
+       	logExceldownload('guest','S1894','4.236.93.133');
+       	dataGrid.exportTitles = ["지자체별  사고지표 현황"];
+	        gridRoot.excelExportSave("", false);
+       }
+   }
+   
+   /** 엑셀 다운로드 버튼
+     * 수정일자 : 2020.11.27
+     * 작업자 : 신재석
+     */
+   function excelExport() {
+       logExceldownload('guest','S1894','4.236.93.133');
+		dataGrid.exportTitles = ["지자체별  사고지표 현황"];
+       gridRoot.excelExportSave("", false);
+   }
+	
+
+	
+	function radio(param){		
+		document.getElementById("stand").value = param;			 
+	
+	}	
+	
+	function setCondition(){
+	
+		var stand = document.getElementById("stand").value;
+		var standNm = "";
+		
+		
+		if(stand=="all"){
+			standNm = "전체사고";
+		}else if(stand=="death"){
+			standNm = "사망사고";
+		}else{
+			standNm = "중상사고";
+		}
+				
+		var std_year = document.getElementById("std_year").value;
+		var end_year = document.getElementById("end_year").value;
+		var sidoNm = document.getElementById("sido").options[document.getElementById("sido").options.selectedIndex].text;
+		var jijaceClsNm = document.getElementById("jijacecls").options[document.getElementById("jijacecls").options.selectedIndex].text;
+		var standYear = document.getElementById("stnDate").value;
+		
+		var condition = "[조회조건] 대상사고: " + standNm + ", 기간: " + std_year + "~" + end_year 
+						+ ", 지자체( 광역: " + sidoNm + ",지자체 특성 :" + jijaceClsNm + ")," + " 기준년:" + standYear ;
+		
+	  
+	    document.getElementById('loadM').style.display = 'block';
+	    
+	    
+	}
+	
+	
+	function leadingZeros(n, digits) {
+	    var zero = '';
+	    n = n.toString();
+	    
+	    if (n.length < digits) {
+	        for (var i = 0; i < digits - n.length; i++)
+	            zero += '0';
+	    }
+	    return zero + n;
+	}
+	
+	 var dataUrl;
+		var chartType;
+		//차트관련 JS
+		function initChart(param){
+			
+			if(gridData==""){
+				alert("조회를 하고나서 차트보기를 하세요.");
+				return;
+			}
+			
+			
+			var sido = document.getElementById("sido").value;
+			var stand = document.getElementById("stand").value;
+			var sYear = document.getElementById("std_year").value;
+			var eYear = document.getElementById("end_year").value;
+			var jijace_cls = document.getElementById("jijacecls").value;
+			var selAcc = param;
+			
+			if(sido!=""){
+				alert("광역자치단체가 전국일때만 차트를 보실수 있습니다.");
+				return;
+			}
+			
+			if(selAcc==""){			
+				alert("차트로 보고싶은 데이터를 선택하세요");
+				return;		
+			}
+			
+		    //차트타이틀 설정
+		    var chart_text = new Array("발생건수","사망자수","인구1만사고","차1만사고","도로사고","인구1만사고","차1만사상","도로사상");
+			chartType = chart_text[param-1];
+			
+			document.getElementById("div_chart").style.display = 'block';
+		    
+		 	// 데이터 URL 경로 정의.
+		    var url = "";
+		    var params = "";
+		    
+			url = '/web/TG/TG200/TG2100/Chart/Tg2114_BarChart.jsp'; 
+
+		    params ="stand="+stand+"&sYear="+sYear+"&eYear="+eYear+"&sido="+sido+"&jijace_cls="+jijace_cls+"&selAcc="+selAcc;
+			
+		   /*  var	result = fnWriteChartObject('1001' ,'3D_무지개(Yellow)'
+						,url + '?' + params
+						,'100%'
+						,'400'
+						,'1'); */
+		    
+			dataURL = url + '?' + params;
+		    
+			
+		    //차트생성 시작
+			// -----------------------차트 설정 시작-----------------------
+			// rMate 차트 생성 준비가 완료된 상태 시 호출할 함수를 지정합니다.
+			var chartVars = "rMateOnLoadCallFunction=chartReadyHandler";
+			 
+			// rMateChart 를 생성합니다.
+			// 파라메터 (순서대로) 
+			//  1. 차트의 id ( 임의로 지정하십시오. ) 
+			//  2. 차트가 위치할 div 의 id (즉, 차트의 부모 div 의 id 입니다.)
+			//  3. 차트 생성 시 필요한 환경 변수들의 묶음인 chartVars
+			//  4. 차트의 가로 사이즈 (생략 가능, 생략 시 100%)
+			//  5. 차트의 세로 사이즈 (생략 가능, 생략 시 100%)
+			rMateChartH5.create("chart1", "div_chart", chartVars, "100%", "100%"); 
+			// -----------------------차트 설정 끝 -----------------------
+		    //차트생성 종료
+		    
+		    var result_menu = "";
+		    var alt_text = new Array("발생건수","사망자수","인구1만사고","차1만사고","도로사고","인구1만사고","차1만사상","도로사상");
+		    var span_text = new Array("check","person","people","directions_car","directions","person","directions_car","directions");
+		    
+		    for (var i = 0; i < 8; i++){
+		    	var img_i = "";
+		    	img_i = leadingZeros(i+1, 2);
+		    	
+		    	var img_on = "";
+		    	if (param == i+1){ img_on = " class='on'"; }
+		    	var param_i = i+1;
+		    	
+		    	result_menu += "<li><a href='#none' onclick='initChart("+param_i+");'"+img_on+"><span class='material-icons'>"+ span_text[i] +"</span>"+alt_text[i]+"</a></li>";
+		    }
+		    document.getElementById("chart_menu").innerHTML = result_menu;
+		    chart();
+
+		}
+
+		// 차트의 속성인 rMateOnLoadCallFunction 으로 설정된 함수.
+		// rMate 차트 준비가 완료된 경우 이 함수가 호출됩니다.
+		// 이 함수를 통해 차트에 레이아웃과 데이터를 삽입합니다.
+		// 파라메터 : id - rMateChartH5.create() 사용 시 사용자가 지정한 id 입니다.
+		// 차트 콜백함수 4개 존재합니다.
+		// 1. setLayout - 스트링으로 작성된 레이아웃 XML을 삽입합니다.
+		// 2. setData - 배열로 작성된 데이터를 삽입합니다.
+		// 3. setLayoutURL - 레이아웃 XML 경로를 지시합니다.
+		// 4. setDataURL - 데이터 XML 경로를 지시합니다.
+		var layoutStr;
+		function chartReadyHandler(id) {
+			var title = "지자체별";
+			// 라인 차트를 생성하는 레이아웃입니다.(스트링 형태)
+			layoutStr = 
+		        '<rMateChart backgroundColor="#FFFFFF" borderStyle="none">'
+		        +'<Options>'
+		           +'<Caption text="' + title + ' '+ chartType +' 현황" />'
+		          +'<SubCaption text="(단위. 수)" textAlign="center" />'
+		      +'</Options>'
+		      +'<NumberFormatter id="numFmt" precision="0" rounding = "nearest"/>'
+			      +'<Column3DChart showDataTips="true" columnWidthRatio="0.4">'
+			      +'<horizontalAxis>'
+		            +'<CategoryAxis categoryField="Area" title="'+ title +'"/>'
+		         +'</horizontalAxis>'
+		       +'<verticalAxis>'
+		          +'<LinearAxis id="vAxis" title="" formatter="{numFmt}"/>'
+		      +'</verticalAxis>'
+		         +'<verticalAxisRenderers>'
+		             +'<Axis3DRenderer axis="{vAxis}" showLine="true" verticalAxisTitleAlignment="horizontal" />'
+		       +'</verticalAxisRenderers>'
+		        +'<series>'
+		            +'<Column3DSeries labelPosition="outside" yField="Count" displayName="" outsideLabelYOffset="-14" formatter = "{numFmt}">'
+		                +'<showDataEffect>'
+		                    +'<SeriesInterpolate/>'
+		                +'</showDataEffect>'
+		           +'</Column3DSeries>'
+		       +'</series>'
+		   +'</Column3DChart>'
+	  +'</rMateChart>';
+		   document.getElementById(id).setLayout(layoutStr);
+		   document.getElementById(id).setDataURL(dataURL);
+		    //예제4. 레이아웃 URL, 데이터 URL
+	
+		  
+		}
+	 
+	 
+	 
+	//사고현황(세부) 팝업
+	function view_detail() {
+		var sYear = document.getElementById('std_year').value;
+        var eYear = document.getElementById('end_year').value;
+        var sidoNm = document.getElementById('sido').options[document.getElementById('sido').selectedIndex].innerHTML;
+        var sido = document.getElementById('sido').value;
+        var jijaceclsNm = document.getElementById('jijacecls').options[document.getElementById('jijacecls').selectedIndex].innerHTML;
+        var jijacecls = document.getElementById('jijacecls').value;
+        var stand = document.getElementById("stand").value;
+        
+        if(eYear < sYear){
+            alert('시작년도는 종료년도 보다 작아야 합니다.');
+            return false;
+        }       
+      
+	    popupWindow = window.open("/web/TG/TG200/TG2100/Tg2114_detail.jsp?mid=S1894&sYear="+sYear+"&eYear="+eYear+"&sido="+sido+"&jijacecls="+jijacecls+"&stand="+stand
+	            , "SagoDetail"
+	            , "toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=no,width=1080,height=645,top=50,left=100");
+	    popupWindow.focus();
+	}
+	
+	
+		
+//]]>>
+
+</script>
+</head>
+<body id="htmlMove">
+<!-- <div id="wrapper"> -->
+
+	<!-- Top Start -->
+	
+<script type="text/javascript">
+
+function fn_goDown5(file_id){
+	
+	if(file_id == ''){
+        alert("준비중입니다.")
+    }
+    
+	if(file_id != ''){
+		location.href= "/web/common/FileCommDownloadManual.jsp?fileId=" + file_id;
+	}
+	return false;
+}
+
+function fnOpenGis(){
+	//window.open("http://tmacs.kotsa.or.kr/webgis/main.do", "_blank");
+	 var myForm = document.popForm;
+	 var url = "https://tmacs.kotsa.or.kr/webgis/main.do";
+	 var winl = screen.width;
+     var wint = screen.height;
+	 var settings  ='height='+wint+',';
+	     settings +='width='+winl+',';
+	     settings +='top='+0+',';
+	     settings +='left='+0+',';
+	     settings +='scrollbars=yes,';
+	     settings +='resizable=yes, status=yes';
+	 newwin = window.open(url,"yPop",settings);
+	 myForm.action =url; 
+	 myForm.method="post";
+	 myForm.target="yPop";
+	 myForm.submit();
+}
+
+function fnOpenBlank(url){
+	window.open(url, "_blank");
+}
+
+function fnTg7300Js(){
+	window.open("https://dtis.kotsa.or.kr", "dtisPop");
+}
+</script>
+    <!-- 전체메뉴PC -->
+    <div id="modalLayer" style="display: none;">
+        <p class="modal_close"><a href="#" class="pop_close"><img src="/images/new_tmacs/close.png" width="43" height="43" alt="전체메뉴 닫기" /></a></p>
+        <div class="modalContent">
+
+            <div class="tmenu_list">
+                <div class="tm">
+                    <p class="tm_tl">교통사고 정보</p>
+                    <ul class="tm_list">
+                        <li><a href="/web/TG/TG200/TG2100S/Tg2101.jsp?mid=S1147">교통사고 원인분석</a>
+                            <ul>
+                                <li><a href="/web/TG/TG100/TG0100/Tg0100_01.jsp?mid=S1221">- 개요</a></li>
+                                <li><a href="/web/TG/TG200/TG2100S/Tg2101.jsp?mid=S1147">- 교통사고 현황</a></li>
+                                <li><a href="/web/TG/TG300/TG3060/Tg3050.jsp?mid=S2170">- 교통사고 원인조사</a></li>
+                                <li><a href="/web/TG/TG200/TraSafeReport/SaftyExcelReport.jsp?mid=S1891">- 지자체 교통안전</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/web/TG/TG300/TG3100/Tg2127.jsp?mid=S1810">사고위험도로</a>
+                            <ul>
+                                <li><a href="/web/TG/TG300/TG3100/Tg2127.jsp?mid=S1810">- 사고다발지점</a></li>
+                                <li><a href="/web/TG/TG300/TG3200/Tg3200_34.jsp?mid=S1812">- 교통약자다발지점</a></li>
+                                <li><a href="/web/TG/TG300/TG3300/Tg3300_41.jsp?mid=S2114">- 대형/중대한 사고다발지점</a></li>
+                                <li><a href="/web/TG/TG300/TG3400/Tg3400_48.jsp?mid=S1361">- 사업용자동차다발지점</a></li>
+                                <li><a href="/web/TG/TG300/TG3800/Tg3800_62.jsp?mid=S1818">- 도로별 사고누적구간</a></li>
+                                <li><a href="/web/TG/TG300/TG3600/Tg3600_61.jsp?mid=S1821">- 개별사고발생지점</a></li>
+                                <li><a href="/web/TG/TG300/TG3990/Tg3990.jsp?mid=S2179">- 기상상태별 사고누적지점</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#this">전자지도</a>
+                            <ul>
+                                <li><a href="/web/TG/TG100/TG1100/Tg1100_01.jsp?mid=S1229">- 개요</a></li>
+                                <li><a href="#this" onclick="fnOpenGis();" target="_blank">- GIS 정보시스템</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tm">
+                    <p class="tm_tl">운수회사 교통안전 정보</p>
+                    <ul class="tm_list">
+                        <li><a href="#this">운수회사 현황 및 사고 정보</a>
+                            <ul>
+                                <li><a href="/web/TG/TG400/TG4200/Tg4200_62.jsp?mid=S1311">- 운수회사현황</a></li>
+                                <li><a href="/web/TG/TG400/TG4200/Tg4200_64.jsp?mid=S1313">- 운수종사자현황</a></li>
+                                <li><a href="/web/TG/TG400/TG4300/Tg4300_70.jsp?mid=S1319">- 사업용자동차 교통사고현황</a></li>
+                                <li><a href="/web/TG/TG400/TG4400/Tg4400_77.jsp?mid=S1326">- 사업용자동차 교통법규위반 현황</a></li>
+                                <li><a href="/web/TG/TG400/TG4500/Tg4500_84.jsp?mid=S1333">- 운수종사자 운전면허/음주운전 현황</a></li>
+		              			  
+                            </ul>
+                        </li>
+                        <li><a href="#this">교통안전관리규정</a>
+                            <ul>
+                                <li><a href="/web/TG/TG100/TG0300/Tg0300_01.jsp?mid=S1242">- 개요</a></li>
+                                <li><a href="/web/TG/TG100/TG0300/Tg0300_05.jsp?mid=S2339">- 평가결과</a></li>
+                                <li><a href="/web/TG/TG100/TG0300/Tg0300_05_01.jsp?mid=S2359">- 관리대장</a></li>
+                                <li><a href="/web/TG/TG100/TG0600/Tg0610_01.jsp?mid=S2379">- 처분결과등록</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#this">교통시설 안전진단</a>
+                            <ul>
+								<li><a href="/web/TG/TG100/TG0500/Tg0500_01.jsp?mid=S1268">- 교통시설안전진단</a></li>
+                                <li><a href="/web/TG/TG100/TG0300/Tg0500_01.jsp?mid=S3019">- 진단기관등록현황</a></li>
+                                <li><a href="/web/TG/TG100/TG0300/Tg0600_01.jsp?mid=S3084">- 진단실적통계</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#this">교통수단안전점검</a>
+                            <ul>
+                                <li><a href="/web/TG/TG100/TG0910/Tg0910_01.jsp?mid=S3092">- 개요</a></li>
+		              			 
+                            </ul>
+                        </li>
+                        <li><a href="#this">운행기록 분석결과</a>
+                            <ul>
+                                <li><a href="/web/TG/TG100/TG0700/Tg0700_01.jsp?mid=S1270">- 개요</a></li>
+                                <li><a href="/web/TG/TG200/TG2200/Tg3000.jsp?mid=S2319">- 분석결과</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#this">운전적성정밀검사</a>
+                            <ul>
+                                <li><a href="/web/TG/TG100/TG0900/Tg0900_01.jsp?mid=S1272">- 개요</a></li>
+                                <li><a href="/web/TG/TG400/TG4600/Tg7000.jsp?mid=S2320">- 검사결과</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tm">
+                    <p class="tm_tl">지자체 교통안전 정보</p>
+                    <ul class="tm_list">
+                        <li><a href="#this">교통문화지수</a>
+                            <ul>
+                                <li><a href="/web/TG/TG100/TG0800/Tg0800_01.jsp?mid=S1271">- 개요</a></li>
+                                <li><a href="/web/TG/TG100/TG0800/Tg0800_02_Re1.jsp?mid=S1286">- 조사항목별 결과</a></li>
+                                <li><a href="/web/TG/TG400/TG4600/Tg7300_01.jsp?mid=S2719">- 평가지표별 결과</a></li>
+		              			 
+                            </ul>
+                        </li>
+                        <li><a href="#this">지역교통안전계획</a>
+                            <ul>
+                                <li><a href="/web/TG/TG100/TG0200/Tg0200_01.jsp?mid=S1222">- 개요</a></li>
+                                <li><a href="/web/TG/TG200/TG2200/Tg2003.jsp?mid=S2305">- 추진실적</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#this">자동차안전및주행거리</a>
+                            <ul>
+                                <li><a href="/web/TG/TG100/TG1000/Tg1000_01.jsp?mid=S1228">- 자동차안전</a></li>
+                                <li><a href="/web/TG/TG100/TG1200/Tg1200_01.jsp?mid=S1275">- 자동차 주행거리통계</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#this">교통약자 관련 정보</a>
+                            <ul>
+                                <li><a href="javascript:fnTg7300Js();">- 교통약자현황</a></li>
+                                <li><a href="javascript:fnTg7300Js();">- 이동지원센터 현황</a></li>
+                                <li><a href="javascript:fnTg7300Js();">- 이동편의시설 현황</a></li>
+                                <li><a href="javascript:fnTg7300Js();">- 교통약자 실태조사 보고서</a></li>
+                            </ul>
+                        </li>
+						 
+                    </ul>
+                </div>
+                <div class="tm">
+                    <p class="tm_tl">교통안전정보관리시스템</p>
+                    <ul class="tm_list">
+                        <li><a href="/web/information/TrafficSafety.jsp?mid=S1871">TMACS 소개</a></li>
+                        <li><a href="https://www.esky.go.kr/" target="_blank">통합항공안전정보시스템</a></li>
+                        <li><a href="https://www.railsafety.or.kr/index.do" target="_blank">철도안전정보종합관리시스템</a></li>
+                        <li><a href="https://www.gicoms.go.kr/" target="_blank">해양안전종합정보시스템</a></li>
+                        <li><a href="/web/TA/system/law/Laws.jsp?mid=S1875" target="_blank">관련법령</a></li>
+                        <li><a href="/web/TA/common/Updateservice.jsp?mid=S1881">FAQ</a></li>
+                        <li><a href="/web/new/safety/evaluation.jsp?mid=S1851">안전도평가지수계산기</a></li>
+                        <li><a href="/web/TA/board/BoardList.jsp?mid=S1879&amp;categoryId=040&amp;boardId=notice">공지사항</a></li>
+              			
+              			
+                        <li><a href="https://main.kotsa.or.kr/portal/contents.do?menuCode=04010200" target="_blank">고객의 소리</a></li>
+                        <li><a href="#this" onclick="fn_goDown5('fd9d7307-329d-4037-b02e-0ff1ef0b42a3'); return false;">서비스 수요조사</a></li>
+                        <li><a href="#this" onclick="fn_goDown5('fd9d7401-529c-8137-a01e-1fd1ec1b42b4'); return false;">교통안전담당자 교육 일정 안내</a></li>
+						 
+                        <li onclick="RequestForPermission();"><a href="#none" onclick="">TMACS 권한 신청</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--// 전체메뉴PC -->
+
+    <!-- 전체메뉴Mobile -->
+    <div class="gnbWrap" style="display: none;">
+        <div id="gnb" style="left: -100%;">
+            <div class="mobile_logo">
+                <img src="/images/new_tmacs/m_logo02.png" alt="TMACS 교통안전정보관리시스템" />
+            </div>
+            <div class="mgnb">
+                <div class="mbleft">
+                    <a href="#this" class="on_1">교통사고<br/>정보</a>
+                    <a href="#this">운수회사<br />교통안전 정보</a>
+                    <a href="#this">지자체<br/>교통안전 정보</a>
+                    <a href="#this">교통안전정보<br/>관리시스템</a>
+                </div>
+                <div class="mbright">
+                    <div class="mbsubBox">
+                        <p>
+                            <a href="#this">교통사고 원인조사</a>
+                        </p>
+                        <ul>
+                            <li><a href="#this">교통사고 원인분석</a>
+                                <ul class="depth_03">
+                                    <li><a href="/web/TG/TG100/TG0100/Tg0100_01.jsp?mid=S1221">개요</a></li>
+                                    <li><a href="#this">교통사고 현황</a>
+                                         <ul class="depth_04">
+                                            <li><a href="/web/TG/TG200/TG2100S/Tg2101.jsp?mid=S1147">지자체별 교통사고 </a></li>
+                                            <li><a href="/web/TG/TG200/TG2100S/Tg2102.jsp?mid=S1203">위반유형별 교통사고 </a></li>
+                                            <li><a href="/web/TG/TG200/TG2100S/Tg2102.jsp?mid=S1202">사고유형별 교통사고 </a></li>
+                                            <li><a href="/web/TG/TG200/TG2100S/Tg2102.jsp?mid=S1191">기상상태별 교통사고 </a></li>
+                                            <li><a href="/web/TG/TG200/TG2100S/Tg2102.jsp?mid=S1190">도로형태별 교통사고 </a></li>
+                                            <li><a href="/web/TG/TG200/TG2100S/Tg2102.jsp?mid=S1181">운전경력별 교통사고 </a></li>
+                                            <li><a href="/web/TG/TG200/TG2100S/Tg2102.jsp?mid=S1180">성별 교통사고 </a></li>
+                                            <li><a href="/web/TG/TG200/TG2100S/Tg2102.jsp?mid=S1179">연령대별 교통사고 </a></li>
+                                            <li><a href="/web/TG/TG200/TG2100S/Tg2102.jsp?mid=S1177">연도별 교통사고 </a></li>
+                                            <li><a href="/web/TG/TG200/TG2100S/Tg2102.jsp?mid=S2300">사업용차량사고 교통사고 </a></li>
+                                        </ul>                                       
+                                    </li>
+                                    <li><a href="#this">교통사고 원인조사</a>
+                                         <ul class="depth_04">
+                                            <li><a href="/web/TG/TG300/TG3060/Tg3050.jsp?mid=S2170">사고누적지점</a></li>
+                                            <li><a href="/web/TG/TG300/TG3050/Tg3050.jsp?mid=S1830">사고누적구간</a></li>
+                                            <li><a href="/web/TG/TG300/TG3050/Tg3070.jsp?mid=S3143">결과보고서 등록 현황</a></li>
+										</ul>
+                                    </li>
+                                    <li><a href="#this">지자체 교통안전</a>
+                                         <ul class="depth_04">
+                                            <li><a href="/web/TG/TG200/TraSafeReport/SaftyExcelReport.jsp?mid=S1891">지역별 현황표</a></li>
+                                            <li><a href="/web/TG/TG200/TraSafeReport/SaftyReport.jsp?mid=S1890">교통안전리포트</a></li>
+                                            <li><a href="/web/TG/TG200/TG2100/Tg2115.jsp?mid=S1895">년도별</a></li>
+                                            <li><a href="/web/TG/TG200/TG2100/Tg2114.jsp?mid=S1894">지자체별</a></li>
+                                            <li><a href="/web/TG/TG200/TG2100/Tg2126.jsp?mid=S1893">관련지표</a></li>
+                                            <li><a href="/web/TG/TG200/TG2100/Tg2117.jsp?mid=S3146">사업용자동차 세부용도별</a></li>
+										</ul>                                    
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#this">사고위험도로</a>
+                                <ul class="depth_03">
+                                    <li><a href="#this">사고다발지점</a>
+                                         <ul class="depth_04">
+                                            <li><a href="/web/TG/TG300/TG3100/Tg2127.jsp?mid=S1810">전체사고</a></li>
+                                            <li><a href="/web/TG/TG300/TG3100/Tg2127.jsp?mid=S1811">중상이상사고</a></li>
+										</ul>  
+                                    </li>
+                                    <li><a href="#this">교통약자다발지점</a>
+                                         <ul class="depth_04">
+                                            <li><a href="/web/TG/TG300/TG3200/Tg3200_34.jsp?mid=S1812">고령자</a></li>
+                                            <li><a href="/web/TG/TG300/TG3200/Tg3200_34.jsp?mid=S1813">보행자</a></li>
+                                            <li><a href="/web/TG/TG300/TG3200/Tg3200_34.jsp?mid=S1814">자전거</a></li>
+                                            <li><a href="/web/TG/TG300/TG3200/Tg3200_34.jsp?mid=S1815">어린이</a></li>
+										</ul>  
+                                    </li>
+                                    <li><a href="#this">대형/중대한 사고다발지점</a>
+                                         <ul class="depth_04">
+                                            <li><a href="/web/TG/TG300/TG3300/Tg3300_41.jsp?mid=S2114">대형/중대한 사고다발지점</a></li>
+										</ul>  
+                                    </li>
+                                    <li><a href="#this">사업용자동차다발지점</a>
+                                         <ul class="depth_04">
+                                            <li><a href="/web/TG/TG300/TG3400/Tg3400_48.jsp?mid=S1361">사업용자동차다발지점</a></li>
+										</ul>  
+                                    </li>
+                                    <li><a href="#this">도로별 사고누적구간</a>
+                                         <ul class="depth_04">
+                                            <li><a href="/web/TG/TG300/TG3800/Tg3800_62.jsp?mid=S1818">고속국도</a></li>
+                                            <li><a href="/web/TG/TG300/TG3800/Tg3800_62.jsp?mid=S1819">일반국도</a></li>
+                                            <li><a href="/web/TG/TG300/TG3800/Tg3800_62.jsp?mid=S1820">도시고속화도로</a></li>
+										</ul> 
+                                    </li>
+                                    <li><a href="#this">개별사고발생지점</a>
+                                         <ul class="depth_04">
+                                            <li><a href="/web/TG/TG300/TG3600/Tg3600_61.jsp?mid=S1821">사망사고발생지점</a></li>
+                                            <li><a href="/web/TG/TG300/TG3900/Tg3900_61.jsp?mid=S1822">대형사고발생지점</a></li>
+										</ul>                                     
+                                    </li>
+                                    <li><a href="#this">기상상태별 사고누적지점</a>
+                                         <ul class="depth_04">
+                                            <li><a href="/web/TG/TG300/TG3990/Tg3990.jsp?mid=S2179">맑은날 사고</a></li>
+                                            <li><a href="/web/TG/TG300/TG3990/Tg3990.jsp?mid=S2180">흐린 날 사고</a></li>
+                                            <li><a href="/web/TG/TG300/TG3990/Tg3990.jsp?mid=S2130">비 사고</a></li>
+                                            <li><a href="/web/TG/TG300/TG3990/Tg3990.jsp?mid=S2131">안개 사고</a></li>
+                                            <li><a href="/web/TG/TG300/TG3990/Tg3990.jsp?mid=S2132">눈 사고</a></li>
+                                            <li><a href="/web/TG/TG300/TG3990/Tg3990.jsp?mid=S2181">기타 사고</a></li>
+										</ul>                                     
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#this">전자지도</a>
+                                <ul class="depth_03">
+                                    <li><a href="/web/TG/TG100/TG1100/Tg1100_01.jsp?mid=S1229">개요</a></li>
+                                    <li><a href="#this" onclick="fnOpenGis();">GIS 정보시스템</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mbsubBox">
+                        <p>
+                            <a href="#this">운수회사 교통안전 정보</a>
+                        </p>
+                        <ul>
+                            <li><a href="#this">운수회사 현황 및 사고 정보</a>
+                                <ul class="depth_03">
+                                    <li><a href="#this">운수회사현황</a>
+                                         <ul class="depth_04">
+                                            <li><a href="/web/TG/TG400/TG4200/Tg4200_62.jsp?mid=S1311">운수회사 일반현황</a></li>
+                                            <li><a href="/web/TG/TG400/TG4200/Tg4200_63.jsp?mid=S1312">운수종사자현황</a></li>
+					              			       
+                                        </ul>                                      
+                                    </li>
+                                    <li><a href="#this">운수종사자현황</a>
+                                         <ul class="depth_04">
+                                            <li><a href="/web/TG/TG400/TG4200/Tg4200_64.jsp?mid=S1313">운수종사자 일반현황</a></li>
+                                            <li><a href="/web/TG/TG400/TG4200/Tg4200_66.jsp?mid=S1315">월별 운수종사자현황</a></li>
+                                            <li><a href="/web/TG/TG400/TG4200/Tg4200_65.jsp?mid=S1314">연도별 운수종사자현황</a></li>
+<!--                                             <li><a href="/web/TG/TG400/TG4200/Tg4200_68.jsp?mid=S1317">성별 운수종사자현황</a></li> -->
+                                            <li><a href="/web/TG/TG400/TG4200/Tg4200_67.jsp?mid=S1316">연령대별 운수종사자현황</a></li>
+                                        </ul>                                        
+                                    </li>
+                                    <li><a href="#this">사업용자동차 교통사고현황</a>
+                                         <ul class="depth_04">
+                                            <li><a href="/web/TG/TG400/TG4300/Tg4300_70.jsp?mid=S1319">연도별 교통사고 </a></li>
+                                            <li><a href="/web/TG/TG400/TG4300/Tg4300_73.jsp?mid=S1322">연령대별 교통사고 </a></li>
+					              			                                            
+                                            <li><a href="/web/TG/TG400/TG4300/Tg4300_69.jsp?mid=S1318">지자체별 교통사고 </a></li>
+                                            <li><a href="/web/TG/TG400/TG4300/Tg4300_74.jsp?mid=S1323">성별 교통사고 </a></li>
+                                            <li><a href="/web/TG/TG400/TG4300/Tg4300_71.jsp?mid=S1320">월별 교통사고</a></li>
+                                            <li><a href="/web/TG/TG400/TG4300/Tg4300_72.jsp?mid=S1321">업종별 교통사고</a></li>
+                                        </ul>             
+                                    </li>
+                                    <li><a href="#this">사업용자동차 교통법규위반 현황</a>
+                                         <ul class="depth_04">
+                                            <li><a href="/web/TG/TG400/TG4400/Tg4400_77.jsp?mid=S1326">연도별 위반현황</a></li>
+                                            <li><a href="/web/TG/TG400/TG4400/Tg4400_80.jsp?mid=S1329">연령대별 위반현황</a></li>
+					              			                                            
+                                            <li><a href="/web/TG/TG400/TG4400/Tg4400_76.jsp?mid=S1325">지자체별 위반현황</a></li>
+                                            <li><a href="/web/TG/TG400/TG4400/Tg4400_81.jsp?mid=S1330">성별 위반현황</a></li>
+                                            <li><a href="/web/TG/TG400/TG4400/Tg4400_78.jsp?mid=S1327">월별 위반현황</a></li>
+                                            <li><a href="/web/TG/TG400/TG4400/Tg4400_79.jsp?mid=S1328">업종별 위반현황</a></li>
+                                        </ul>                                     
+                                    </li>
+                                    <li><a href="#this">운수종사자 운전면허/음주운전 현황</a>
+                                         <ul class="depth_04">
+                                            <li><a href="/web/TG/TG400/TG4500/Tg4500_84.jsp?mid=S1333">연도별 위반현황</a></li>
+                                            <li><a href="/web/TG/TG400/TG4500/Tg4500_87.jsp?mid=S1336">연령대별 위반현황</a></li>
+					              			                                            
+                                            <li><a href="/web/TG/TG400/TG4500/Tg4500_83.jsp?mid=S1332">지자체별 위반현황</a></li>
+                                            <li><a href="/web/TG/TG400/TG4500/Tg4500_88.jsp?mid=S1337">성별 위반현황</a></li>
+                                            <li><a href="/web/TG/TG400/TG4500/Tg4500_85.jsp?mid=S1334">월별 위반현황</a></li>
+                                            <li><a href="/web/TG/TG400/TG4500/Tg4500_86.jsp?mid=S1335">업종별 위반현황</a></li>
+                                        </ul>                                     
+                                    </li>
+			              			                                      
+                                </ul>
+                            </li>
+                            <li><a href="#this">교통안전관리규정</a>
+                                <ul class="depth_03">
+                                    <li><a href="/web/TG/TG100/TG0300/Tg0300_01.jsp?mid=S1242">개요</a></li>
+                                    <li><a href="/web/TG/TG100/TG0300/Tg0300_05.jsp?mid=S2339">평가결과</a></li>
+                                    <li><a href="/web/TG/TG100/TG0300/Tg0300_05_01.jsp?mid=S2359">관리대장</a></li>
+                                    <li><a href="/web/TG/TG100/TG0600/Tg0610_01.jsp?mid=S2379">처분결과등록</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#this">교통시설 안전진단</a>
+                                <ul class="depth_03">
+									<li><a href="#this">교통시설안전진단</a>
+                                         <ul class="depth_04">
+                                            <li><a href="/web/TG/TG100/TG0500/Tg0500_01.jsp?mid=S1268">개요</a></li>
+                                            <li><a href="/web/TG/TG100/TG0500/Tg0500_02.jsp?mid=S2303">교통시설관리(도로)</a></li>
+                                            <li><a href="/web/TG/TG100/TG0500/Tg0500_02_3.jsp?mid=S2439">교통시설관리(철도)</a></li>
+					              			                                            
+                                        </ul> 
+                                    </li>
+                                    <li><a href="/web/TG/TG100/TG0300/Tg0500_01.jsp?mid=S3019">진단기관등록현황</a></li>
+                                    <li><a href="#this">진단실적통계</a>
+                                         <ul class="depth_04">
+                                            <li><a href="/web/TG/TG100/TG0300/Tg0600_01.jsp?mid=S3084">도로등급별 진단실적</a></li>
+										 </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#this">교통수단 안전점검</a>
+                                <ul class="depth_03">
+                                    <li><a href="/web/TG/TG100/TG0910/Tg0910_01.jsp?mid=S3092">개요</a></li>
+			              			                                     
+                                </ul>
+                            </li>
+                            <li><a href="#this">운행기록분석</a>
+                                <ul class="depth_03">
+                                    <li><a href="/web/TG/TG100/TG0700/Tg0700_01.jsp?mid=S1270">개요</a></li>
+                                    <li><a href="/web/TG/TG200/TG2200/Tg3000.jsp?mid=S2319">분석결과</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#this">운전적성정밀검사</a>
+                                <ul class="depth_03">
+                                    <li><a href="/web/TG/TG100/TG0900/Tg0900_01.jsp?mid=S1272">개요</a></li>
+                                    <li><a href="/web/TG/TG400/TG4600/Tg7000.jsp?mid=S2320">검사결과</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mbsubBox">
+                        <p>
+                            <a href="#this">지자체별 교통안전</a>
+                        </p>
+                        <ul>
+                            <li><a href="#this">교통문화지수</a>
+                                <ul class="depth_03">
+	                                <li><a href="/web/TG/TG100/TG0800/Tg0800_01.jsp?mid=S1271">- 개요</a></li>
+	                                <li><a href="/web/TG/TG100/TG0800/Tg0800_02_Re1.jsp?mid=S1286">- 조사항목별 결과</a></li>
+	                                <li><a href="/web/TG/TG400/TG4600/Tg7300_01.jsp?mid=S2719">- 평가지표별 결과</a></li>
+			              			   	                                
+                                </ul>
+                            </li>
+	                        <li><a href="#this">지역교통안전계획</a>
+	                            <ul class="depth_03">
+	                                <li><a href="/web/TG/TG100/TG0200/Tg0200_01.jsp?mid=S1222">- 개요</a></li>
+	                                <li><a href="#this">- 추진실적</a>
+                                         <ul class="depth_04">
+                                         	<li><a href="/web/TG/TG200/TG2200/Tg2004.jsp?mid=S3201">2022년 이후</a></li>
+                                            <li><a href="/web/TG/TG200/TG2200/Tg2003.jsp?mid=S3141">2016년~2021년</a></li>
+                                            <li><a href="/web/TG/TG200/TG2200/Tg2002.jsp?mid=S3140">2014년~2015년</a></li>
+                                            <li><a href="/web/TG/TG200/TG2200/Tg2000.jsp?mid=S3139">2013년 이전</a></li>
+                                        </ul> 
+	                                </li>
+	                            </ul>
+	                        </li>
+	                        <li><a href="#this">자동차안전및주행거리</a>
+	                            <ul class="depth_03">
+	                                <li><a href="#this">- 자동차안전</a>
+                                         <ul class="depth_04">
+                                            <li><a href="/web/TG/TG100/TG1000/Tg1000_01.jsp?mid=S1228">개요</a></li>
+                                            <li><a href="#this" onclick="fnOpenBlank(''https://www.kncap.org/indexNew.jsp');">평가결과</a></li>
+                                        </ul> 
+	                                </li>
+	                                <li><a href="#this">- 자동차 주행거리통계</a>
+                                         <ul class="depth_04">
+                                            <li><a href="/web/TG/TG100/TG1200/Tg1200_01.jsp?mid=S1275">개요</a></li>
+                                            <li><a href="/web/TG/TG200/TG2200/Tg1700_01.jsp?mid=S3079">차종별 유형별 규모별 주행거리</a></li>
+                                            <li><a href="/web/TG/TG200/TG2200/Tg1700_02.jsp?mid=S3080">차종별 연료별 주행거리</a></li>
+                                        </ul> 	                                
+	                                </li>
+	                            </ul>
+	                        </li>
+	                        <li><a href="#this">교통약자 관련 정보</a>
+	                            <ul class="depth_03">
+	                                <li><a href="javascript:fnTg7300Js();">- 교통약자현황</a></li>
+	                                <li><a href="javascript:fnTg7300Js();">- 이동지원센터 현황</a></li>
+	                                <li><a href="#this">- 이동편의시설 현황</a>
+                                         <ul class="depth_04">
+                                            <li><a href="javascript:fnTg7300Js();">교통수단별 현황</a></li>
+                                            <li><a href="javascript:fnTg7300Js();">여객시설별 현황</a></li>
+                                            <li><a href="javascript:fnTg7300Js();">도로(보행환경)</a></li>
+                                            <li><a href="javascript:fnTg7300Js();">2016년도 이전 자료</a></li>
+					              			                                            
+                                        </ul> 	        
+	                                </li>
+	                                <li><a href="#this">- 교통약자 실태조사 보고서</a>
+                                         <ul class="depth_04">
+											<li><a href="javascript:fnTg7300Js();">복지지표 개요</a></li>
+											<li><a href="javascript:fnTg7300Js();">연도별 교통복지지표 통계</a></li>
+                                            <li><a href="javascript:fnTg7300Js();">연차보고서</a></li>
+                                        </ul>   
+	                                </li>
+	                            </ul>
+	                        </li>
+							   
+                        </ul>
+                    </div>
+
+
+                    <div class="mbsubBox">
+                        <p>
+                            <a href="#this">교통안전정보관리시스템</a>
+                        </p>
+                        <ul>
+                            <li><a href="#this">TMACS 소개</a>
+                                <ul class="depth_03">
+	                                <li><a href="/web/information/TrafficSafety.jsp?mid=S1871">- 목적</a></li>
+	                                <li><a href="/web/information/SystemUse.jsp?mid=S1872">- 법적근거</a></li>
+	                                <li><a href="/web/information/SystemAfter.jsp?mid=S1873">- 콘텐츠 및 활용분야</a></li>
+	                                <li><a href="/web/information/Mission.jsp?mid=S1874">- 미션 및 비전</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="https://www.esky.go.kr/" target="_blank" class="nblank">통합항공안전정보시스템</a></li>
+                            <li><a href="https://www.railsafety.or.kr/index.do" target="_blank" class="nblank">철도안전정보종합관리시스템</a></li>
+                            <li><a href="https://www.gicoms.go.kr/" target="_blank" class="nblank">해양안전종합정보시스템</a></li>
+                     		<li><a href="/web/TA/system/law/Laws.jsp?mid=S1875" target="_blank">관련법령</a></li>
+	                        <li><a href="/web/TA/common/Updateservice.jsp?mid=S1881">FAQ</a></li>
+	                        <li><a href="/web/new/safety/evaluation.jsp?mid=S1851">안전도평가지수계산기</a></li>
+	                        <li><a href="/web/TA/board/BoardList.jsp?mid=S1879&amp;categoryId=040&amp;boardId=notice">공지사항</a></li>
+              			
+              			
+	                        <li><a href="https://main.kotsa.or.kr/portal/contents.do?menuCode=04010200" target="_blank">고객의 소리</a></li>
+	                        <li><a href="#this" onclick="fn_goDown5('fd9d7307-329d-4037-b02e-0ff1ef0b42a3'); return false;">서비스 수요조사</a></li>
+	                        <li><a href="#this" onclick="fn_goDown5('fd9d7401-529c-8137-a01e-1fd1ec1b42b4'); return false;">교통안전담당자 교육 일정 안내</a></li>
+                         
+                        	<li onclick="RequestForPermission();"><a href="#none" onclick="">TMACS 권한 신청</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="btnContactUs"></div>
+                </div>
+            </div>
+            <a href="#this" class="btnClose">닫기</a>
+        </div>
+        <div class="mbbg"></div>
+    </div>
+    <!--// 전체메뉴Mobile -->
+	<!-- Top End -->
+
+	<!-- Menu Start -->
+	
+
+
+
+
+
+
+
+
+    <!-- header -->
+    <div id="header">
+		<!-- Skip Navi -->
+		<div class="skipnavi">
+			<a href="#content">상단 퀵메뉴 건너뛰기</a>
+		</div>
+		<!-- Skip Navi -->
+		
+        <!-- header_inner -->
+        <div class="header_inner">
+            <h1 onclick="location.href='/main.jsp'"><a href="/main.jsp"><img src="/images/new_tmacs/logo.jpg" alt="TMACS 교통안전정보관리시스템" /></a></h1>
+            <div id="t_nav">
+                <ul class="gnb">
+                    <li><a href="#this">교통사고 정보</a>
+                        <div class="snb_list">
+                            <ul>
+                                <li><a href="/web/TG/TG200/TG2100S/Tg2101.jsp?mid=S1147">교통사고 원인분석</a></li>
+                                <li><a href="/web/TG/TG300/TG3100/Tg2127.jsp?mid=S1810">사고위험도로</a></li>
+                                <li><a href="/web/TG/TG100/TG1100/Tg1100_01.jsp?mid=S1229">전자지도</a></li>
+                                <li><a class="deco-none;">&nbsp;</a></li>
+                                <li><a class="deco-none;">&nbsp;</a></li>
+                                <li><a class="deco-none;">&nbsp;</a></li>
+                                <li><a class="deco-none;">&nbsp;</a></li>
+                                <li><a class="deco-none;">&nbsp;</a></li>
+		              			
+		              			
+								<li><a class="deco-none;">&nbsp;</a></li>
+								<li><a class="deco-none;">&nbsp;</a></li>
+								<li><a class="deco-none;">&nbsp;</a></li>
+								<li><a class="deco-none;">&nbsp;</a></li>
+								
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#this">운수회사 교통안전 정보</a>
+                        <div class="snb_list">
+                            <ul>
+                                <li><a href="/web/TG/TG400/TG4200/Tg4200_62.jsp?mid=S1311">운수회사 현황 및 사고 정보</a></li>
+                                <li><a href="/web/TG/TG100/TG0300/Tg0300_05.jsp?mid=S2339">교통안전관리규정</a></li>
+                                <li><a href="/web/TG/TG100/TG0500/Tg0500_01.jsp?mid=S1268">교통시설 안전진단</a></li>
+                                <li><a href="/web/TG/TG100/TG0910/Tg0910_01.jsp?mid=S3092">교통수단 안전점검</a></li>
+                                <li><a href="/web/TG/TG200/TG2200/Tg3000.jsp?mid=S2319">운행기록분석</a></li>
+                                <li><a href="/web/TG/TG400/TG4600/Tg7000.jsp?mid=S2320">운전적성정밀검사</a></li>
+                                <li><a class="deco-none;">&nbsp;</a></li>
+                                <li><a class="deco-none;">&nbsp;</a></li>
+		              			
+		              			
+								<li><a class="deco-none;">&nbsp;</a></li>
+								<li><a class="deco-none;">&nbsp;</a></li>
+								<li><a class="deco-none;">&nbsp;</a></li>
+								<li><a class="deco-none;">&nbsp;</a></li>
+								
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#this">지자체 교통안전 정보</a>
+                        <div class="snb_list">
+                            <ul>
+                                <li><a href="/web/TG/TG100/TG0800/Tg0800_01.jsp?mid=S1271">교통문화지수</a></li>
+                                <li><a href="/web/TG/TG200/TG2200/Tg2004.jsp?mid=S3201">지역교통안전계획</a></li>
+                                <li><a href="/web/TG/TG100/TG1000/Tg1000_01.jsp?mid=S1228">자동차안전및주행거리</a></li>
+                                <li><a href="javascript:fnTg7300Js();">교통약자 관련 정보<span class="blank">새창</span></a></li>
+								
+									<li><a class="deco-none;">&nbsp;</a></li>
+                                	<li><a class="deco-none;">&nbsp;</a></li>
+								
+								
+                                <li><a class="deco-none;">&nbsp;</a></li>
+                                <li><a class="deco-none;">&nbsp;</a></li>
+		              			
+		              			
+								<li><a class="deco-none;">&nbsp;</a></li>
+								<li><a class="deco-none;">&nbsp;</a></li>
+								<li><a class="deco-none;">&nbsp;</a></li>
+								<li><a class="deco-none;">&nbsp;</a></li>    
+		              			                            
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#this">교통안전정보관리</a>
+
+                        <div class="snb_list">
+                            <ul>
+                                <li><a href="/web/information/TrafficSafety.jsp?mid=S1871">TMACS 소개</a></li>
+                                <li><a href="https://www.esky.go.kr/" target="_blank">통합항공안전정보시스템</a></li>
+                                <li><a href="https://www.railsafety.or.kr/index.do" target="_blank">철도안전정보종합관리시스템</a></li>
+                                <li><a href="https://www.gicoms.go.kr/" target="_blank">해양안전종합정보시스템</a></li>
+                                <li><a href="/web/TA/system/law/Laws.jsp?mid=S1875" target="_blank">관련법령</a></li>
+                                <li><a href="/web/TA/common/Updateservice.jsp?mid=S1881">FAQ</a></li>
+                                <li><a href="/web/new/safety/evaluation.jsp?mid=S1851">안전도평가지수계산기</a></li>
+                                <li><a href="/web/TA/board/BoardList.jsp?mid=S1879&amp;categoryId=040&amp;boardId=notice">공지사항</a></li>
+		              			
+		              			
+                                <li><a href="https://main.kotsa.or.kr/portal/contents.do?menuCode=04010200" target="_blank">고객의 소리</a></li>
+                                <li><a href="#this" onclick="fn_goDown5('fd9d7307-329d-4037-b02e-0ff1ef0b42a3'); return false;">서비스 수요조사</a></li>
+                                <li><a href="#this" onclick="fn_goDown5('fd9d7401-529c-8137-a01e-1fd1ec1b42b4'); return false;">교통안전담당자 교육 일정 안내</a></li>
+
+								 
+						                                
+                                <li onclick="RequestForPermission();"><a href="#none" onclick="">TMACS 권한 신청</a></li>
+
+                                <!-- <li onclick="fn_goDown5('fd9d7307-329d-4037-b02e-0ff1ef0b42a3'); return false;"><a href="#this">서비스 수요조사</a></li> -->
+                                <!-- <li><a href="https://www.kotsa.or.kr/portal/contents.do?menuCode=04010200">고객의 소리</a></li> -->
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+			
+			
+            <script type="text/javascript">
+            	function RequestForPermission(){
+            			
+            	   				alert('로그인을 하신 후 이용하시기 바랍니다.');
+            	   				//history.go(0);
+      				
+	            }
+			</script>	
+            <!--  snb 영역 삭제 
+            <div class="snb">
+            </div>
+            -->
+
+<!--             <p class="top_login"><a href="/web/TA/member/LoginGuide.jsp?mid=S3111" alt="">로그인</a></p>
+            <p class="tmenu"><a href="#" class="modalLink">전체메뉴</a></p> -->
+
+	
+		    <p class="top_login"><a href="/web/TA/member/LoginGuide.jsp?mid=S3111">로그인</a></p>
+		    
+    
+            <p class="tmenu"><a href="#" class="modalLink">전체메뉴</a></p>
+
+        </div>
+        <!-- header_inner -->
+    </div>
+    <!-- header -->
+
+	<!-- Menu End -->
+
+	<div id="container">
+		<div class="top_line">
+			<div class="inner">
+				<ul class="location">
+					<li class="home">HOME</li>
+					<li>교통사고 정보</li>
+					<li>교통사고 원인분석</li>
+					<li>지자체 교통안전</li>
+					<li>지자체별</li>
+				</ul>
+				
+<div class="util_area">
+	<a href="#none" class="dict" onclick="go_popup();">용어정의</a> 
+	<a href="javascript:;" class="sns" id="kakao-link-btn">sns공유하기</a>
+</div>
+
+			</div>
+		</div>
+		
+		
+		<div class="contaier_box">
+		<!-- Left Start -->
+		
+
+
+
+
+
+
+
+
+
+        <div id="lnb">
+            <div class="lnb_menu">
+                
+                <ul>
+                
+                	<li class="" id="left_li_0">
+                	      
+                          
+                                    <a 
+                                    
+                                    
+                                    href="/web/TG/TG100/TG0100/Tg0100_01.jsp?mid=S1221" 
+                                    onclick="goPageVpn('/web/TG/TG100/TG0100/Tg0100_01.jsp','S1221','', 'N','N',''); return false;"
+                                    
+                                    
+                                    class="depth2">개요</a>
+                                    
+                                    
+                                    
+                          
+                          
+                    </li>
+                	
+                	<li class="null" id="left_li_1">
+                	      
+                          <a href="javascript:menu2Depth('1', 'null');" class="depth2">교통사고 현황</a>
+                          
+                          <ul class="depth_03">
+	                        	  <li>
+	                        	      <a 
+	                        	      
+	                        	      
+	                        	      
+	                        	      
+                                    
+	                                    href="/web/TG/TG200/TG2100S/Tg2101.jsp?mid=S1147" 
+	                                    onclick="goPageVpn('/web/TG/TG200/TG2100S/Tg2101.jsp','S1147','', 'N','N',''); return false;"
+	                                    
+	                                    
+	                        	      
+	                        	       >지자체별 교통사고</a>
+	                        	     
+	                        	  </li>
+	                        	  
+	                        	  <li>
+	                        	      <a 
+	                        	      
+	                        	      
+	                        	      
+	                        	      
+                                    
+	                                    href="/web/TG/TG200/TG2100S/Tg2102.jsp?mid=S1203" 
+	                                    onclick="goPageVpn('/web/TG/TG200/TG2100S/Tg2102.jsp','S1203','', 'N','N',''); return false;"
+	                                    
+	                                    
+	                        	      
+	                        	       >위반유형별 교통사고</a>
+	                        	     
+	                        	  </li>
+	                        	  
+	                        	  <li>
+	                        	      <a 
+	                        	      
+	                        	      
+	                        	      
+	                        	      
+                                    
+	                                    href="/web/TG/TG200/TG2100S/Tg2102.jsp?mid=S1202" 
+	                                    onclick="goPageVpn('/web/TG/TG200/TG2100S/Tg2102.jsp','S1202','', 'N','N',''); return false;"
+	                                    
+	                                    
+	                        	      
+	                        	       >사고유형별 교통사고</a>
+	                        	     
+	                        	  </li>
+	                        	  
+	                        	  <li>
+	                        	      <a 
+	                        	      
+	                        	      
+	                        	      
+	                        	      
+                                    
+	                                    href="/web/TG/TG200/TG2100S/Tg2102.jsp?mid=S1191" 
+	                                    onclick="goPageVpn('/web/TG/TG200/TG2100S/Tg2102.jsp','S1191','', 'N','N',''); return false;"
+	                                    
+	                                    
+	                        	      
+	                        	       >기상상태별 교통사고</a>
+	                        	     
+	                        	  </li>
+	                        	  
+	                        	  <li>
+	                        	      <a 
+	                        	      
+	                        	      
+	                        	      
+	                        	      
+                                    
+	                                    href="/web/TG/TG200/TG2100S/Tg2102.jsp?mid=S1190" 
+	                                    onclick="goPageVpn('/web/TG/TG200/TG2100S/Tg2102.jsp','S1190','', 'N','N',''); return false;"
+	                                    
+	                                    
+	                        	      
+	                        	       >도로형태별 교통사고</a>
+	                        	     
+	                        	  </li>
+	                        	  
+	                        	  <li>
+	                        	      <a 
+	                        	      
+	                        	      
+	                        	      
+	                        	      
+                                    
+	                                    href="/web/TG/TG200/TG2100S/Tg2102.jsp?mid=S1181" 
+	                                    onclick="goPageVpn('/web/TG/TG200/TG2100S/Tg2102.jsp','S1181','', 'N','N',''); return false;"
+	                                    
+	                                    
+	                        	      
+	                        	       >운전경력별 교통사고</a>
+	                        	     
+	                        	  </li>
+	                        	  
+	                        	  <li>
+	                        	      <a 
+	                        	      
+	                        	      
+	                        	      
+	                        	      
+                                    
+	                                    href="/web/TG/TG200/TG2100S/Tg2102.jsp?mid=S1180" 
+	                                    onclick="goPageVpn('/web/TG/TG200/TG2100S/Tg2102.jsp','S1180','', 'N','N',''); return false;"
+	                                    
+	                                    
+	                        	      
+	                        	       >성별 교통사고</a>
+	                        	     
+	                        	  </li>
+	                        	  
+	                        	  <li>
+	                        	      <a 
+	                        	      
+	                        	      
+	                        	      
+	                        	      
+                                    
+	                                    href="/web/TG/TG200/TG2100S/Tg2102.jsp?mid=S1179" 
+	                                    onclick="goPageVpn('/web/TG/TG200/TG2100S/Tg2102.jsp','S1179','', 'N','N',''); return false;"
+	                                    
+	                                    
+	                        	      
+	                        	       >연령대별 교통사고</a>
+	                        	     
+	                        	  </li>
+	                        	  
+	                        	  <li>
+	                        	      <a 
+	                        	      
+	                        	      
+	                        	      
+	                        	      
+                                    
+	                                    href="/web/TG/TG200/TG2100S/Tg2102.jsp?mid=S1177" 
+	                                    onclick="goPageVpn('/web/TG/TG200/TG2100S/Tg2102.jsp','S1177','', 'N','N',''); return false;"
+	                                    
+	                                    
+	                        	      
+	                        	       >연도별 교통사고</a>
+	                        	     
+	                        	  </li>
+	                        	  
+	                        	  <li>
+	                        	      <a 
+	                        	      
+	                        	      
+	                        	      
+	                        	      
+                                    
+	                                    href="/web/TG/TG200/TG2100S/Tg2102.jsp?mid=S2300" 
+	                                    onclick="goPageVpn('/web/TG/TG200/TG2100S/Tg2102.jsp','S2300','', 'N','N',''); return false;"
+	                                    
+	                                    
+	                        	      
+	                        	       >사업용차량사고 교통사고</a>
+	                        	     
+	                        	  </li>
+	                        	  </ul>
+                    </li>
+                	
+                	<li class="null" id="left_li_2">
+                	      
+                          <a href="javascript:menu2Depth('2', 'null');" class="depth2">교통사고 원인조사</a>
+                          
+                          <ul class="depth_03">
+	                        	  <li>
+	                        	      <a 
+	                        	      
+	                        	      
+	                        	      
+	                        	      
+                                    
+	                                    href="/web/TG/TG300/TG3060/Tg3050.jsp?mid=S2170" 
+	                                    onclick="goPageVpn('/web/TG/TG300/TG3060/Tg3050.jsp','S2170','', 'N','N',''); return false;"
+	                                    
+	                                    
+	                        	      
+	                        	       >사고누적구간</a>
+	                        	     
+	                        	  </li>
+	                        	  
+	                        	  <li>
+	                        	      <a 
+	                        	      
+	                        	      
+	                        	      
+	                        	      
+                                    
+	                                    href="/web/TG/TG300/TG3050/Tg3050.jsp?mid=S1830" 
+	                                    onclick="goPageVpn('/web/TG/TG300/TG3050/Tg3050.jsp','S1830','', 'N','N',''); return false;"
+	                                    
+	                                    
+	                        	      
+	                        	       >사고누적지점</a>
+	                        	     
+	                        	  </li>
+	                        	  
+	                        	  <li>
+	                        	      <a 
+	                        	      
+	                        	      
+	                        	      
+	                        	      
+                                    
+	                                    href="/web/TG/TG300/TG3050/Tg3070.jsp?mid=S3143" 
+	                                    onclick="goPageVpn('/web/TG/TG300/TG3050/Tg3070.jsp','S3143','', 'N','N',''); return false;"
+	                                    
+	                                    
+	                        	      
+	                        	       >결과보고서 등록 현황</a>
+	                        	     
+	                        	  </li>
+	                        	  </ul>
+                    </li>
+                	
+                	<li class="on" id="left_li_3">
+                	      
+                          <a href="javascript:menu2Depth('3', 'false');" class="depth2">지자체 교통안전</a>
+                          
+                          <ul class="depth_03">
+	                        	  <li>
+	                        	      <a 
+	                        	      
+	                        	      
+	                        	      
+	                        	      
+                                    
+	                                    href="/web/TG/TG200/TraSafeReport/SaftyExcelReport.jsp?mid=S1891" 
+	                                    onclick="goPageVpn('/web/TG/TG200/TraSafeReport/SaftyExcelReport.jsp','S1891','', 'N','N',''); return false;"
+	                                    
+	                                    
+	                        	      
+	                        	       >지역별 현황표</a>
+	                        	     
+	                        	  </li>
+	                        	  
+	                        	  <li>
+	                        	      <a 
+	                        	      
+	                        	      
+	                        	      
+	                        	      
+                                    
+	                                    href="/web/TG/TG200/TraSafeReport/SaftyReport.jsp?mid=S1890" 
+	                                    onclick="goPageVpn('/web/TG/TG200/TraSafeReport/SaftyReport.jsp','S1890','', 'N','N',''); return false;"
+	                                    
+	                                    
+	                        	      
+	                        	       >교통안전리포트</a>
+	                        	     
+	                        	  </li>
+	                        	  
+	                        	  <li>
+	                        	      <a 
+	                        	      
+	                        	      
+	                        	      
+	                        	      
+                                    
+	                                    href="/web/TG/TG200/TG2100/Tg2115.jsp?mid=S1895" 
+	                                    onclick="goPageVpn('/web/TG/TG200/TG2100/Tg2115.jsp','S1895','', 'N','N',''); return false;"
+	                                    
+	                                    
+	                        	      
+	                        	       >년도별</a>
+	                        	     
+	                        	  </li>
+	                        	  
+	                        	  <li>
+	                        	      <a 
+	                        	      
+	                        	      
+	                        	      
+	                        	      
+                                    
+	                                    href="/web/TG/TG200/TG2100/Tg2114.jsp?mid=S1894"  class="active" 
+	                                    onclick="goPageVpn('/web/TG/TG200/TG2100/Tg2114.jsp','S1894','', 'N','N',''); return false;"
+	                                    
+	                                    
+	                        	      
+	                        	       >지자체별</a>
+	                        	     
+	                        	  </li>
+	                        	  
+	                        	  <li>
+	                        	      <a 
+	                        	      
+	                        	      
+	                        	      
+	                        	      
+                                    
+	                                    href="/web/TG/TG200/TG2100/Tg2126.jsp?mid=S1893" 
+	                                    onclick="goPageVpn('/web/TG/TG200/TG2100/Tg2126.jsp','S1893','', 'N','N',''); return false;"
+	                                    
+	                                    
+	                        	      
+	                        	       >관련지표</a>
+	                        	     
+	                        	  </li>
+	                        	  
+	                        	  <li>
+	                        	      <a 
+	                        	      
+	                        	      
+	                        	      
+	                        	      
+                                    
+	                                    href="/web/TG/TG200/TG2100/Tg2117.jsp?mid=S3146" 
+	                                    onclick="goPageVpn('/web/TG/TG200/TG2100/Tg2117.jsp','S3146','', 'N','N',''); return false;"
+	                                    
+	                                    
+	                        	      
+	                        	       >사업용자동차 세부용도별</a>
+	                        	     
+	                        	  </li>
+	                        	  </ul>
+                    </li>
+                	
+                </ul>
+                <div class="bottom"></div>
+            </div>
+        </div>
+
+        <!-- Left End -->
+        
+		<div id="content" class="cont">
+			<div class="cont_top">
+				<h3>
+					<span class="depth3">지자체별</span>
+					<!-- <p class="bredcrumb"><img src="/images/common/icon_home.gif" alt="홈" /> > 교통안전계획 > <span class="current">지자체별</span></p> -->
+				</h3>
+				<!-- <div class="guide">
+					<ul>
+						<li>지역교통안전기본계획 수립 지원을 위한 지자체별 각종 사고지표 현황입니다.</li>
+						<li>아래의 그리드가 보이지 않을 경우 플래시플레이어를 업데이트 후 새로운 브라우저로 사이트에 <br />접속해 주세요.</li>
+					</ul>
+					<p class="bottom"><a href="http://get.adobe.com/kr/flashplayer/" target="_blank" title="새창열림"><img src="/images/common/btn_flash_update.gif" alt="플래시업 데이트"/></a></p>
+				</div> -->
+				
+				
+<div class="util_area">
+	<a href="#none" class="dict" onclick="go_popup();">용어정의</a> 
+	<a href="javascript:;" class="sns" id="kakao-link-btn">sns공유하기</a>
+</div>
+
+				
+				<div class="mid_line">
+                        <ul class="location">
+                            <li class="home">HOME</li>
+                            <li>교통사고 정보</li>
+							<li>교통사고 원인분석</li>
+							<li>지자체 교통안전</li>
+							<li>지자체별</li>
+                        </ul>
+                	</div>
+                </div>
+				
+				<div class="cont_box">
+				<!-- 조회 영역 -->
+				<div class="filterForm">
+				<div class="form_wrap">
+					<input type="hidden" name="stnDate" id="stnDate" value="" />
+					<dl class="row row-12">
+						<dt> <label for="">조회기간</label></dt> 
+						<dd class="form_period">
+							<select name="std_year" id="std_year" class="form wp25">
+							</select>&nbsp;<span>~</span> 
+							<select name="end_year" id="end_year" class="form wp25">							
+							</select>&nbsp;<span></span> 
+						</dd>
+					</dl>
+					<dl class="row row-6">
+						<dt><label for="">광역자치단체</label></dt>
+						<dd>
+							<select name="sido" id="sido" class="form wp100" onchange="selectSecond()">
+							</select>
+						</dd>
+					</dl>
+					<dl class="row row-6">
+						<dt><label for="">지자체 특성</label></dt>
+						<dd>
+							<select class="form wp100" id="jijacecls" name="jijacecls">
+									<option value="00" >광역시/도</option>
+									<option value="01" >30만이상시</option>
+									<option value="02" >30만미만시</option>
+							</select>
+						</dd>
+					</dl>
+					
+					
+					<dl class="row row-12">
+						<dt><label for="">대상사고</label></dt>
+						<dd>
+							<span class="rad02">
+                                <input type="radio" name="std_type" value="all" id="std_1" class="input_radio" checked checked='checked' onclick="radio(this.value)">
+                                <label for="std_1">전체사고</label>
+                            </span>
+                            <span class="rad02">
+                                <input type="radio" name="std_type" value="death" id="std_2" class="input_radio"  onclick="radio(this.value)">
+                                <label for="std_2">사망사고</label>
+                            </span>
+                            <span class="rad02">
+                                <input type="radio" name="std_type" value="serious" id="std_3" class="input_radio"  onclick="radio(this.value)">
+                                <label for="std_3">중상사고</label>
+                            </span>
+                            
+						<input type="hidden" name="stand" id="stand" value="all"/>							
+						</dd>
+					</dl>
+					</div>
+					
+					<div class="btn_wrap">
+						<a href="#" class="btn btn_primary" onclick="onMove();return false;">조 회</a>
+						<!-- <input type="image" src="/images/common/btn_inquiry.gif" alt="조회" onclick="onMove();return false;" /> -->
+					</div>
+					<p class="bottom"></p>
+				</div>
+				<!-- 그리드 박스 Start -->
+                <div class="grid">
+                	<!-- <p class="buttons">
+                        <a href="javascript:view_detail()"><img src="/images/common/btn_accident_situation.gif" alt="사고현황(세부)" /></a>
+                        <a href="#exlDown" onclick="excelExport(); return false;"><img src="/images/common/btn_excel_download.gif" alt="엑셀다운로드" /></a>
+                    </p> -->
+                    <div class="btn_box type02">
+                        <a href="javascript:view_detail()" class="btn morebtn">사고현황(세부)</a>
+                        <a href="#exlDown" class="btn exbtn" onclick="excelExport(); return false;">엑셀다운로드</a>
+                    </div>
+                    <!-- <img src="/images/temp/grid.gif" alt="그리드테이블자리" /> -->
+                    <!-- 그리드 start -->
+                    <!-- 그리드박스 로딩  -->
+                    <div id="loadM" class="loadingSwf1">
+                        <script type="text/javascript">
+                            <!--
+                            flashControl('/images/statistic/loading.swf','loading');
+                            //-->
+                        </script>
+                    </div>
+                    <div id="gridBox" style="width:100%; height:470px;">
+                        
+
+<!-- 엑셀 다운로드 -->
+<!-- <p class="exlBt"><a href="#exlDown" onclick="excelExport(); return false;"><img src="/images/TG/btn_exeldown.gif" alt="엑셀다운로드" /></a></p> -->
+<!-- //엑셀 다운로드 -->
+
+
+<script type="text/javascript">
+	
+
+	//그리드 내 이미지 경로 설정
+	rMateGridH5.setAssetsPath("/rMateGridH5/Assets/");
+	//그리드 생성
+	rMateGridH5.create("grid1", "gridBox", jsVars, "100%", "100%");
+</script>
+                    </div>                    
+                    <!-- 그리드end -->
+                    
+                </div>
+                <!-- 그리드 박스 END -->
+				<!-- 차트 -->				
+				<h4 class="tle_h4">차트</h4>
+					<ul class="chart_btn">
+						<li><a href="javascript:initChart(1);"><span class="material-icons">check</span>발생건수</a></li>
+						<li><a href="javascript:initChart(2);"><span class="material-icons">person</span>사망자수</a></li>
+						<li><a href="javascript:initChart(3);"><span class="material-icons">people</span>인구1만 사고</a></li>
+						<li><a href="javascript:initChart(4);"><span class="material-icons">directions_car</span>차1만 사고</a></li>
+						<li><a href="javascript:initChart(5);"><span class="material-icons">directions</span>도로 사고</a></li>
+						<li><a href="javascript:initChart(6);"><span class="material-icons">person</span>인구1만 사상</a></li>
+						<li><a href="javascript:initChart(7);"><span class="material-icons">directions_car</span>차1만 사상</a></li>
+						<li><a href="javascript:initChart(8);"><span class="material-icons">directions</span>도로 사상</a></li>
+					</ul>	
+				
+				<div id="content_chart" style="margin-top: 10px;">
+					<div id="div_chart" style="display: none;"></div>
+                    <!-- <iframe id="ifrmRexPreview1" name="ifrmRexPreview1" width=685 height=500 frameborder=0 marginwidth=0 marginheight=0 scrolling=auto></iframe> -->
+                </div>
+                <p class="info">출처: 경찰청 사고자료(도로교통공단 교통사고분석시스템(TAAS)), 조회년도말 기준 과거 3년 자료로 산출되었습니다. </p>
+
+                <br />
+                        <!-- <ul class="info"> -->
+                            <p class="info">주1) 인구수는 행정안전부 주민등록 인구자료</p>
+                            <p class="info">주2) 자동차 등록대수에 이륜차, 건설기계, 농기계는 제외됨</p>
+                        <!-- </ul> -->
+                        
+                    <!-- ReSearch Start -->
+					
+
+
+
+
+
+
+
+    
+    <script type="text/javascript">
+   
+
+    function onSatifReg(){
+
+		var satis_rad = null;
+		var satis_age = null;
+		var satis_job = null;
+		var opn_vle = null;
+		var f = document.getElementById('form_satif');
+    	
+    	size = document.getElementsByName("satisScr").length;
+    	
+    	size_age = document.getElementsByName("satisAge").length;
+    	size_job = document.getElementsByName("satisJob").length;
+    	
+    	opn_vle = document.getElementById('one_line').value;
+
+    	for(var i = 0; i < size; i++){
+    		if(document.getElementsByName("satisScr")[i].checked){
+    			satis_rad = document.getElementsByName("satisScr")[i].value;
+    			break;
+    		}
+    	}
+    	for(var i = 0; i < size_age; i++){
+    		if(document.getElementsByName("satisAge")[i].checked){
+    			satis_age = document.getElementsByName("satisAge")[i].value;
+    			break;
+    		}
+    	}
+    	for(var i = 0; i < size_job; i++){
+    		if(document.getElementsByName("satisJob")[i].checked){
+    			satis_job = document.getElementsByName("satisJob")[i].value;
+    			break;
+    		}    		
+    	}
+
+		if(satis_rad == null && opn_vle == ""){
+			alert("만족도 및 한줄의견에 내용이 없습니다.\n만족도 및 한줄의견을 입력해 주세요");
+			f.opn.focus();
+			return false;
+		}
+
+		if(satis_rad == null){
+			satis_rad = "0";
+		}
+		if(satis_age == null){
+			satis_age = "";
+		}
+		if(satis_job == null){
+			satis_job = "";
+		}
+		
+		document.getElementById('menu_id').value="S1894";
+		document.getElementById('user_id').value="guest";
+		document.getElementById('user_ip').value="4.236.93.133";
+		document.getElementById('user_age').value=satis_age;
+		document.getElementById('user_job').value=satis_job;
+		document.getElementById('satif_value').value=satis_rad;
+		
+		 
+		console.log(f.action);
+		targetUrlForm = f;
+		f.submit();
+    }
+	
+   
+   
+    </script>
+	
+	<form action="/web/satisfaction/SatifRegPrc.jsp" method="post" id="form_satif">
+		<input type="hidden" name="menu_id" id="menu_id" value="" />
+		<input type="hidden" name="user_id" id="user_id" value="" />
+		<input type="hidden" name="user_ip" id="user_ip" value="" />
+		<input type="hidden" name="user_age" id="user_age" value="" />
+		<input type="hidden" name="user_job" id="user_job" value="" />
+		<input type="hidden" name="satif_value" id="satif_value" value="" />
+	    <div class="pageResearch">
+	        <div class="research_header">
+	            <h3><a href="#" style="vertical-align: middle; ">만족도조사</a></h3>
+	            <p>화면당 만족도 투표는 <strong>1건/월</strong>이며, 한줄의견(만족도 미체크)은 무제한입니다.</p>
+	        </div>
+	        <div class="research_content">
+	            <ul class="ul01">
+	                <li>
+	                    <p>연령은 어떻게 되십니까?</p>
+	                    <ol>
+	                        <li>
+	                            <input type="radio" id="count06" name="satisAge" value="1" class="input_radio" checked="checked" title="10대" />
+	                            <label for="count06" class="lbl_radio">10대</label>
+	                        </li>
+	                        <li>
+	                            <input type="radio" id="count07" name="satisAge" value="2" class="input_radio" title="20대" />
+	                            <label for="count07" class="lbl_radio">20대</label>
+	                        </li>
+	                        <li>
+	                            <input type="radio" id="count08" name="satisAge" value="3" class="input_radio" title="30대" />
+	                            <label for="count08" class="lbl_radio">30대</label>
+	                        </li>
+	                        <li>
+	                            <input type="radio" id="count09" name="satisAge" value="4" class="input_radio" title="40대" />
+	                            <label for="count09" class="lbl_radio">40대</label>
+	                        </li>
+	                        <li>
+	                            <input type="radio" id="count10" name="satisAge" value="5" class="input_radio" title="50대" />
+	                            <label for="count10" class="lbl_radio">50대</label>
+	                        </li>
+	                        <li>
+	                            <input type="radio" id="count11" name="satisAge" value="6" class="input_radio" title="60대 이상" />
+	                            <label for="count11" class="lbl_radio">60대 이상</label>
+	                        </li>
+	                    </ol>
+	                </li>
+	                <li>
+	                    <p>어떤 일을 하고 계십니까?</p>
+	                    <ul>
+	                        <li>
+	                            <input type="radio" id="count12" name="satisJob" value="1" class="input_radio" checked="checked" title="공공기관" />
+	                            <label for="count12" class="lbl_radio">공공기관</label>
+	                        </li>
+	                        <li>
+	                            <input type="radio" id="count13" name="satisJob" value="2" class="input_radio" title="시민단체" />
+	                            <label for="count13" class="lbl_radio">시민단체</label>
+	                        </li>
+	                        <li>
+	                            <input type="radio" id="count14" name="satisJob" value="3" class="input_radio" title="서비스이용고객" />
+	                            <label for="count14" class="lbl_radio">서비스이용고객</label>
+	                        </li>
+	                        <li>
+	                            <input type="radio" id="count15" name="satisJob" value="4" class="input_radio" title="내부직원" />
+	                            <label for="count15" class="lbl_radio">내부직원</label>
+	                        </li>
+	                        <li>
+	                            <input type="radio" id="count16" name="satisJob" value="5" class="input_radio" title="학생" />
+	                            <label for="count16" class="lbl_radio">학생</label>
+	                        </li>
+	                        <li>
+	                            <input type="radio" id="count17" name="satisJob" value="6" class="input_radio" title="기타" />
+	                            <label for="count17" class="lbl_radio">기타</label>
+	                        </li>
+	                    </ul>
+	                </li>
+	            </ul>
+	            <ul class="ul01">
+	                <li class="count_satisfaction">
+	                    <p>열람하신 정보에 대해 만족하십니까?</p>
+	                    <ol>
+	                        <li>
+	                            <input type="radio" id="count01" name="satisScr" value="5" class="input_radio" checked="checked" title="매우만족" />
+	                            <label for="count01" class="lbl_radio">
+	                                <!--<i class="material-icons">sentiment_very_satisfied</i>-->매우만족</label>
+	                        </li>
+	                        <li>
+	                            <input type="radio" id="count02" name="satisScr" value="4" class="input_radio" title="만족" />
+	                            <label for="count02" class="lbl_radio">
+	                                <!--<i class="material-icons">mood</i>-->만족</label>
+	                        </li>
+	                        <li>
+	                            <input type="radio" id="count03" name="satisScr" value="3" class="input_radio" title="보통" />
+	                            <label for="count03" class="lbl_radio">
+	                                <!--<i class="material-icons">sentiment_satisfied</i>-->보통</label>
+	                        </li>
+	                        <li>
+	                            <input type="radio" id="count04" name="satisScr" value="2" class="input_radio" title="불만족" />
+	                            <label for="count04" class="lbl_radio">
+	                                <!--<i class="material-icons">mood_bad</i>-->불만족</label>
+	                        </li>
+	                        <li>
+	                            <input type="radio" id="count05" name="satisScr" value="1" class="input_radio" title="매우불만족" />
+	                            <label for="count05" class="lbl_radio">
+	                                <!--<i class="material-icons">sentiment_very_dissatisfied</i>-->매우불만족</label>
+	                        </li>
+	                    </ol>
+	                </li>
+	                <li>
+	                    <p>한줄의견(<span style="color:red"> *</span>최대 500자) </p>
+	                    <div class="opinion">
+	                        <input type="text" name="one_line" id="one_line" class="form wp100" placeholder="여러분의 소중한 한마디를 부탁드립니다." title="한줄의견" />
+	                        <input type="hidden" name="menu_nm" id="menu_nm" value = "지자체별" />
+	                        <a href="#" class="btn btn_secondary" onclick="onSatifReg(); return false;">의견등록</a>
+	                    </div>
+	                </li>
+	            </ul>
+	        </div>
+	    </div>
+	</form>
+
+					<!-- ReSearch End -->
+				<!-- 기존에 있던 레이아웃 사용하지 않지만 스크립트 오류 방지를 위해 display none처리 -->
+				<iframe id="ifrmRexPreview1" name="ifrmRexPreview1" width=685 height=500 frameborder=0 marginwidth=0 marginheight=0 scrolling=auto style="display: none;"></iframe>
+                        
+			</div>
+		</div>
+	</div>	
+	
+
+
+
+
+<script type="text/javascript">
+function dataProt(){
+	alert("본 시스템의 개인정보처리방침은 한국교통안전공단의 개인정보처리방침에 준합니다.");
+}
+function goViewer_personalInfor(str){
+	var tarUrl = str;
+	if (confirm("선택하신 컨텐츠는 새창에서 열립니다." ))
+	{
+		window.open(tarUrl,'','width=1000,height=2500');
+	}
+}
+
+//용어사전 호출
+function go_popup(){
+  $('#popup').bPopup();
+};
+</script>
+
+<!-- 카카오톡 공유하기 -->
+<script type="text/javascript" src="//developers.kakao.com/sdk/js/kakao.min.js"></script> 
+<!-- 2024-08-22 임시적으로 비활성화(카카오) -->
+<script type="text/javascript">
+	<!--
+	//모바일 여부
+	var isMobile = false;
+	
+	// PC 환경
+	var filter = "win16|win32|win64|mac";
+	 
+	if (navigator.platform) {
+	    isMobile = filter.indexOf(navigator.platform.toLowerCase()) < 0;
+	}
+	
+	//카카오톡 공유 id 충돌 방지를 위한 각 환경에 맞게 sns 제거
+	if(isMobile){
+		//모바일
+		var obj = $(".top_line").children(".inner").children(".util_area").children(".sns");
+		console.log(obj.html());
+		obj.remove();
+	}else{
+		//PC
+		var obj = $(".cont_top").children(".util_area").children(".sns");
+		console.log(obj.html());
+		obj.remove();	
+	}
+	
+
+	// // 사용할 앱의 JavaScript 키를 설정해 주세요.
+	Kakao.init('f71c1c88f8a445ce2514bc260d9bf269');
+	// // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
+	Kakao.Link.createDefaultButton({
+	  container: '#kakao-link-btn',
+	  objectType: 'feed',
+	  content: {
+	    title: "교통안전정보관리시스템(TMACS)",
+	    description: document.title,
+	    imageUrl: 'https://tmacs.kotsa.or.kr/images/new_tmacs/logo3.jpg',
+	    link: {
+	      webUrl: document.location.href,
+	      mobileWebUrl: document.location.href
+	    }
+	  },
+	/*   social: {
+	    likeCount: 286,
+	    commentCount: 45,
+	    sharedCount: 845
+	  }, */
+	  buttons: [
+	    {
+	      title: '열기',
+	      link: {
+	        mobileWebUrl: document.location.href,
+	        webUrl: document.location.href
+	      }
+	    }  
+	  ]
+	});
+	-->
+</script>
+	<!-- 용어사전 -->
+    <div id="popup" class="Pstyle terms_definition" style="max-width:600px; width:100%;">
+        <div class="pop_title">
+            <h5>용어정의</h5>
+            <a href="#none" class="b-close"><span class="material-icons">close</span></a>
+        </div>
+        <div class="pop_content">
+
+            <div class="terms_box">
+                <dl class="terms_list">
+                
+            
+					<!-- <tr> -->
+					
+					<dt>대형사고</dt>
+					<dd>1건의 교통사고로 사망자수 3명 이상 또는 부상자수 20명 이상인 사고</dd>
+					<!-- </tr> -->
+			
+					<!-- <tr> -->
+					
+					<dt>중대한사고</dt>
+					<dd>운수종사자에 의한 1건의 교통사고로, 여객운송업은 사망자 2명 이상, 사망자 1명과 중상자 3명 이상, 중상자 6명 이상인 경우, 화물운송업은 1명 이상의 사망자 또는 중상자가 발생한 사고</dd>
+					<!-- </tr> -->
+			
+					<!-- <tr> -->
+					
+					<dt>치사율</dt>
+					<dd>교통사고에 의한 사망자수를 교통사고 발생건수로 나눈 것(사망자수/발생건수×100)</dd>
+					<!-- </tr> -->
+			
+					<!-- <tr> -->
+					
+					<dt>다발도</dt>
+					<dd>교통사고 사상정도를 고려한 발생건수&#40;빈도&#41; 기반의 교통사고 통합지표 다발도=&#40;사망사고건수×1.0 + 중상사고건수×0.7 + 경상사고건수×0.3&#41;/사고 누적 연수</dd>
+					<!-- </tr> -->
+			
+					<!-- <tr> -->
+					
+					<dt>심각도</dt>
+					<dd>교통사고 사상정도를 고려한 사상자수 기반의 교통사고 통합지표 심각도=&#40;사망자수×1.0 + 중상자수×0.7 + 경상자수×0.3&#41;/사고 누적 연수</dd>
+					<!-- </tr> -->
+			
+					<!-- <tr> -->
+					
+					<dt>통합지수</dt>
+					<dd>운수종사자 교통안전권고문을 제공하는 안전지표 중 하나로, 다발도 및 심각도를 함께 고려하는 교통사고 통합지표(다발도×0.4 + 심각도×0.6)</dd>
+					<!-- </tr> -->
+			
+					<!-- <tr> -->
+					
+					<dt>통합지표</dt>
+					<dd>교통사고 발생 빈도 및 사상자수를 통합하는 지표를 통칭. 빈도 기반의 ‘다발도’, 사상자수 기반의 ‘심각도’, 다발도와 심각도를 통합하는 ‘통합지수’가 있음</dd>
+					<!-- </tr> -->
+			
+					<!-- <tr> -->
+					
+					<dt>고령자</dt>
+					<dd>만 65세 이상인 사람</dd>
+					<!-- </tr> -->
+			
+					<!-- <tr> -->
+					
+					<dt>1당</dt>
+					<dd>제1당사자, 교통사고에 관계한 사람 가운데 과실이 많은 사람</dd>
+					<!-- </tr> -->
+			
+					<!-- <tr> -->
+					
+					<dt>사고구조분석표</dt>
+					<dd>교통사고 사상정도를 고려한  발생건수(빈도) 기반의 교통사고 통합지표(사망사고건수&times;1.0 + 중상사고건수&times;0.7 + 경상사고건수&times;0.3) / 기준값)</dd>
+					<!-- </tr> -->
+			
+					<!-- <tr> -->
+					
+					<dt>관련자1</dt>
+					<dd>도로교통법상의 "제1당사자"를 의미</dd>
+					<!-- </tr> -->
+			
+					<!-- <tr> -->
+					
+					<dt>관련자2</dt>
+					<dd>도로교통법상의 "제1당사자" 이외의 교통사고 관련자</dd>
+					<!-- </tr> -->
+			
+					<!-- <tr> -->
+					
+					<dt>부상도</dt>
+					<dd>전체 사고건수 대비 사상자 수&#40;사망자수 + 중상자수 + 경상자수 + 부상신고자수&#41;</dd>
+					<!-- </tr> -->
+			
+                
+                    <!-- <dt>대형사고 </dt>
+                    <dd>1건의 교통사고로 사망자수 3명 이상 또는 부상자수 20명 이상인 사고</dd>
+                    <dt>중대한 사고 </dt>
+                    <dd>운수종사자에 의한 1건의 교통사고로, 여객운송업은 사망자 2명 이상, 사망자 1명과 중상자 3명 이상, 중상자 6명 이상인 경우, 화물운송업은 1명 이상의 사망자 또는 중상자가 발생한 사고</dd>
+                    <dt>치사율 </dt>
+                    <dd>교통사고에 의한 사망자수를 교통사고 발생건수로 나눈 것(사망자수/발생건수×100)</dd>
+                    <dt>다발도  </dt>
+                    <dd>교통사고 사상정도를 고려한 발생건수(빈도) 기반의 교통사고 통합지표 다발도=(사망사고건수×1.0 + 중상사고건수×0.7 + 경상사고건수×0.3)</dd>
+                    <dt>심각도  </dt>
+                    <dd>교통사고 사상정도를 고려한 사상자수 기반의 교통사고 통합지표 심각도=(사망자수×1.0 + 중상자수×0.7 + 경상자수×0.3)</dd>
+                    <dt>통합지수  </dt>
+                    <dd>운수종사자 교통안전권고문을 제공하는 안전지표 중 하나로, 다발도 및 심각도를 함께 고려하는 교통사고 통합지표(다발도×0.4 + 심각도×0.6)</dd>
+                    <dt>통합지표</dt>
+                    <dd>교통사고 발생 빈도 및 사상자수를 통합하는 지표를 통칭. 빈도 기반의 ‘다발도’, 사상자수 기반의 ‘심각도’, 다발도와 심각도를 통합하는 ‘통합지수’가 있음</dd>
+                    <dt>고령자</dt>
+		            <dd>만 65세 이상인 사람</dd>
+	                <dt>1당</dt>
+	                <dd>제1당사자, 교통사고에 관계한 사람 가운데 과실이 많은 사람</dd>
+	                <dt>사고구조분석표</dt>
+	                <dd>교통사고 사상정도를 고려한  발생건수(빈도) 기반의 교통사고 통합지표(사망사고건수&times;1.0 + 중상사고건수&times;0.7 + 경상사고건수&times;0.3) / 기준값)</dd>
+	                <dt>관련자1</dt>
+	                <dd>도로교통법상의 '제1당사자'를 의미</dd>
+		            <dt>관련자2</dt>
+		            <dd>도로교통법상의 '제1당사자' 이외의 교통사고 관련자</dd> -->
+            	</dl>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+    	<div class="ft_inner">
+      	<div class="ft_menu">
+        	<ul>
+          	<li><a href="/publicData.jsp" onclick="goViewer(this.href); return false;" target="_blank">공공데이터</a></li>
+            <li><a href="/personalInfor.jsp" onclick="goViewer_personalInfor(this.href); return false;" target="_blank" style="color:blue;">개인정보처리방침</a></li>
+            <li><a href="/viewerDown.jsp" onclick="goViewer(this.href); return false;" target="_blank">뷰어 자료실</a></li> 
+            <li><a href="http://data.molit.go.kr/portal/quality/qualityCenterlist.do?system_id=S0035" onclick="goViewer2(this.href); return false;" target="_blank">품질오류신고 및 확인</a></li>
+			<li><a href="https://main.kotsa.or.kr/portal/contents.do?menuCode=06040100" onclick="goViewer4(this.href); return false;" target="_blank">찾아오시는길</a></li>
+
+          </ul>
+        </div>
+        <address>(우)39660 경북 김천시 혁신6로 17(율곡동, 한국교통안전공단)<br /><span class="mr">대표전화 : 1577-0990</span><span class="mr">Fax : 0502-384-5430</span><span class="mr">유지보수(시스템문의) : 054-459-7553 , 7554</span></address>
+        <p class="ft_copyr">Copyright(c) 2019 BY TS.. All Rights Reserved.</p>
+      </div>
+    </div>
+    <!--// footer -->
+
+<!--nProtect 시작-->
+<!-- 
+	2013-01-09 rMateGrid 화면 초기화 에로로 인해 nprotect사용처리 안함.
+	rMateGrid 재사용시 하단 스크립트 부분 주석재게.	
+-->
+<!--  <script type="Text/Javascript" src="http://update.nprotect.net/keycrypt/tmacs/npkfx.js"></script> -->
+<!--nProtect 끝-->
+
+	<!-- 시도리스트, 지자체리스트, 지자체년도, 지자체 기준일, 운수회사 년도, 사고누적 년도, 사고누적 기준일, 업종리스트, 도로종류 리스트, 도로리스트, 운수회사 기준일 -->
+    
+
+
+
+
+<script type="text/javascript">
+	// 시도리스트 코드
+	arrcode1 = new Array;
+	// 시도리스트 명
+	arrcode2 = new Array;
+	
+	// 지자체리스트 코드 	
+	arrcode3 = new Array;
+	// 지자체리스트 명 
+	arrcode4 = new Array;
+	
+	// 업종 코드 	
+	arrcode5 = new Array;
+	// 업종 명 
+	arrcode6 = new Array;
+	
+	// 도로종류 코드 	
+	arrcode7 = new Array;
+	// 도로종류명 
+	arrcode8 = new Array;
+	
+	// 도로명 코드 	
+	arrcode9 = new Array;
+	// 도로명 
+	arrcode10 = new Array;
+	
+	// 이동편의시설 코드 
+	arrcode11 = new Array;
+	// 이동편의시설 명 
+	arrcode12 = new Array;
+	
+	// 수단시설 코드 
+	arrcode13 = new Array;
+	// 수단시설 명 
+	arrcode14 = new Array;
+	
+	
+	
+	jijaceyear = new Array;
+	
+	corpyear   = new Array;
+	
+	nujukyear = new Array;	
+	
+	strgchk = "Y";
+	
+	sStandDate = "";
+	
+	nujukStandDate = "";
+	
+	transStandDate = "";
+	
+function SetArray(gbn,idx,f1,f2){
+	if(gbn == "1"){
+		arrcode1[idx] = f1;
+		arrcode2[idx] = f2;
+	}
+	else if(gbn == "2")  {
+		arrcode3[idx] = f1;
+		arrcode4[idx] = f2;
+	}else if(gbn == "3")  {
+		arrcode5[idx] = f1;
+		arrcode6[idx] = f2;
+	}else if(gbn == '4'){
+		arrcode7[idx] = f1;
+		arrcode8[idx] = f2;
+	}else if(gbn == '5'){
+		arrcode9[idx] = f1;
+		arrcode10[idx] = f2;
+	}else if(gbn == '6'){
+		arrcode11[idx] = f1;
+		arrcode12[idx] = f2;
+	}else if(gbn == '7'){
+		arrcode13[idx] = f1;
+		arrcode14[idx] = f2;
+	}
+	
+}
+
+function SetYear(gbn,idx,f1){
+	if(gbn == "1"){
+		jijaceyear[idx] = f1;
+	}
+	else if(gbn == "2"){
+		corpyear[idx] = f1;
+	}else if(gbn == "3"){
+		nujukyear[idx] = f1;
+	}
+}	
+</script>
+
+<script type="text/javascript">
+
+        SetArray('1','0','11000','서울');
+
+        SetArray('1','1','26000','부산');
+
+        SetArray('1','2','27000','대구');
+
+        SetArray('1','3','28000','인천');
+
+        SetArray('1','4','29000','광주');
+
+        SetArray('1','5','30000','대전');
+
+        SetArray('1','6','31000','울산');
+
+        SetArray('1','7','36000','세종');
+
+        SetArray('1','8','41000','경기');
+
+        SetArray('1','9','42000','강원');
+
+        SetArray('1','10','43000','충북');
+
+        SetArray('1','11','44000','충남');
+
+        SetArray('1','12','45000','전북');
+
+        SetArray('1','13','46000','전남');
+
+        SetArray('1','14','47000','경북');
+
+        SetArray('1','15','48000','경남');
+
+        SetArray('1','16','50000','제주');
+
+
+
+	   SetArray('2','0','41820','가평군');
+
+	   SetArray('2','1','11680','강남구');
+
+	   SetArray('2','2','11740','강동구');
+
+	   SetArray('2','3','42150','강릉시');
+
+	   SetArray('2','4','11305','강북구');
+
+	   SetArray('2','5','11500','강서구');
+
+	   SetArray('2','6','26440','강서구');
+
+	   SetArray('2','7','46810','강진군');
+
+	   SetArray('2','8','28710','강화군');
+
+	   SetArray('2','9','48310','거제시');
+
+	   SetArray('2','10','48880','거창군');
+
+	   SetArray('2','11','47290','경산시');
+
+	   SetArray('2','12','47130','경주시');
+
+	   SetArray('2','13','44250','계룡시');
+
+	   SetArray('2','14','28245','계양구');
+
+	   SetArray('2','15','47830','고령군');
+
+	   SetArray('2','16','42820','고성군');
+
+	   SetArray('2','17','48820','고성군');
+
+	   SetArray('2','18','41280','고양시');
+
+	   SetArray('2','19','45790','고창군');
+
+	   SetArray('2','20','46770','고흥군');
+
+	   SetArray('2','21','46720','곡성군');
+
+	   SetArray('2','22','44150','공주시');
+
+	   SetArray('2','23','41290','과천시');
+
+	   SetArray('2','24','11620','관악구');
+
+	   SetArray('2','25','41210','광명시');
+
+	   SetArray('2','26','29200','광산구');
+
+	   SetArray('2','27','46230','광양시');
+
+	   SetArray('2','28','41610','광주시');
+
+	   SetArray('2','29','11215','광진구');
+
+	   SetArray('2','30','43760','괴산군');
+
+	   SetArray('2','31','46730','구례군');
+
+	   SetArray('2','32','11530','구로구');
+
+	   SetArray('2','33','41310','구리시');
+
+	   SetArray('2','34','47190','구미시');
+
+	   SetArray('2','35','45130','군산시');
+
+	   SetArray('2','36','27720','군위군');
+
+	   SetArray('2','37','41410','군포시');
+
+	   SetArray('2','38','44710','금산군');
+
+	   SetArray('2','39','26410','금정구');
+
+	   SetArray('2','40','11545','금천구');
+
+	   SetArray('2','41','26710','기장군');
+
+	   SetArray('2','42','45210','김제시');
+
+	   SetArray('2','43','47150','김천시');
+
+	   SetArray('2','44','41570','김포시');
+
+	   SetArray('2','45','48250','김해시');
+
+	   SetArray('2','46','46170','나주시');
+
+	   SetArray('2','47','26290','남구');
+
+	   SetArray('2','48','27200','남구');
+
+	   SetArray('2','49','28170','남구');
+
+	   SetArray('2','50','29155','남구');
+
+	   SetArray('2','51','31140','남구');
+
+	   SetArray('2','52','28200','남동구');
+
+	   SetArray('2','53','41360','남양주시');
+
+	   SetArray('2','54','45190','남원시');
+
+	   SetArray('2','55','48840','남해군');
+
+	   SetArray('2','56','11350','노원구');
+
+	   SetArray('2','57','44230','논산시');
+
+	   SetArray('2','58','43800','단양군');
+
+	   SetArray('2','59','27290','달서구');
+
+	   SetArray('2','60','27710','달성군');
+
+	   SetArray('2','61','46710','담양군');
+
+	   SetArray('2','62','44270','당진시');
+
+	   SetArray('2','63','30230','대덕구');
+
+	   SetArray('2','64','11320','도봉구');
+
+	   SetArray('2','65','26170','동구');
+
+	   SetArray('2','66','27140','동구');
+
+	   SetArray('2','67','28140','동구');
+
+	   SetArray('2','68','29110','동구');
+
+	   SetArray('2','69','30110','동구');
+
+	   SetArray('2','70','31170','동구');
+
+	   SetArray('2','71','11230','동대문구');
+
+	   SetArray('2','72','41250','동두천시');
+
+	   SetArray('2','73','26260','동래구');
+
+	   SetArray('2','74','11590','동작구');
+
+	   SetArray('2','75','42170','동해시');
+
+	   SetArray('2','76','11440','마포구');
+
+	   SetArray('2','77','46110','목포시');
+
+	   SetArray('2','78','46840','무안군');
+
+	   SetArray('2','79','45730','무주군');
+
+	   SetArray('2','80','47280','문경시');
+
+	   SetArray('2','81','28177','미추홀구');
+
+	   SetArray('2','82','48270','밀양시');
+
+	   SetArray('2','83','44180','보령시');
+
+	   SetArray('2','84','46780','보성군');
+
+	   SetArray('2','85','43720','보은군');
+
+	   SetArray('2','86','47920','봉화군');
+
+	   SetArray('2','87','26230','부산진구');
+
+	   SetArray('2','88','45800','부안군');
+
+	   SetArray('2','89','44760','부여군');
+
+	   SetArray('2','90','41190','부천시');
+
+	   SetArray('2','91','28237','부평구');
+
+	   SetArray('2','92','26320','북구');
+
+	   SetArray('2','93','27230','북구');
+
+	   SetArray('2','94','29170','북구');
+
+	   SetArray('2','95','31200','북구');
+
+	   SetArray('2','96','26530','사상구');
+
+	   SetArray('2','97','48240','사천시');
+
+	   SetArray('2','98','26380','사하구');
+
+	   SetArray('2','99','48860','산청군');
+
+	   SetArray('2','100','42230','삼척시');
+
+	   SetArray('2','101','47250','상주시');
+
+	   SetArray('2','102','26140','서구');
+
+	   SetArray('2','103','27170','서구');
+
+	   SetArray('2','104','28260','서구');
+
+	   SetArray('2','105','29140','서구');
+
+	   SetArray('2','106','30170','서구');
+
+	   SetArray('2','107','50130','서귀포시');
+
+	   SetArray('2','108','11410','서대문구');
+
+	   SetArray('2','109','44210','서산시');
+
+	   SetArray('2','110','44770','서천군');
+
+	   SetArray('2','111','11650','서초구');
+
+	   SetArray('2','112','41130','성남시');
+
+	   SetArray('2','113','11200','성동구');
+
+	   SetArray('2','114','11290','성북구');
+
+	   SetArray('2','115','47840','성주군');
+
+	   SetArray('2','116','36110','세종');
+
+	   SetArray('2','117','42210','속초시');
+
+	   SetArray('2','118','11710','송파구');
+
+	   SetArray('2','119','27260','수성구');
+
+	   SetArray('2','120','26500','수영구');
+
+	   SetArray('2','121','41110','수원시');
+
+	   SetArray('2','122','45770','순창군');
+
+	   SetArray('2','123','46150','순천시');
+
+	   SetArray('2','124','41390','시흥시');
+
+	   SetArray('2','125','46910','신안군');
+
+	   SetArray('2','126','44200','아산시');
+
+	   SetArray('2','127','47170','안동시');
+
+	   SetArray('2','128','41270','안산시');
+
+	   SetArray('2','129','41550','안성시');
+
+	   SetArray('2','130','41170','안양시');
+
+	   SetArray('2','131','42800','양구군');
+
+	   SetArray('2','132','48330','양산시');
+
+	   SetArray('2','133','42830','양양군');
+
+	   SetArray('2','134','41630','양주시');
+
+	   SetArray('2','135','11470','양천구');
+
+	   SetArray('2','136','41830','양평군');
+
+	   SetArray('2','137','46130','여수시');
+
+	   SetArray('2','138','41670','여주시');
+
+	   SetArray('2','139','28185','연수구');
+
+	   SetArray('2','140','26470','연제구');
+
+	   SetArray('2','141','41800','연천군');
+
+	   SetArray('2','142','46870','영광군');
+
+	   SetArray('2','143','47770','영덕군');
+
+	   SetArray('2','144','26200','영도구');
+
+	   SetArray('2','145','43740','영동군');
+
+	   SetArray('2','146','11560','영등포구');
+
+	   SetArray('2','147','46830','영암군');
+
+	   SetArray('2','148','47760','영양군');
+
+	   SetArray('2','149','42750','영월군');
+
+	   SetArray('2','150','47210','영주시');
+
+	   SetArray('2','151','47230','영천시');
+
+	   SetArray('2','152','44810','예산군');
+
+	   SetArray('2','153','47900','예천군');
+
+	   SetArray('2','154','41370','오산시');
+
+	   SetArray('2','155','43730','옥천군');
+
+	   SetArray('2','156','28720','옹진군');
+
+	   SetArray('2','157','46890','완도군');
+
+	   SetArray('2','158','45710','완주군');
+
+	   SetArray('2','159','11170','용산구');
+
+	   SetArray('2','160','41460','용인시');
+
+	   SetArray('2','161','47940','울릉군');
+
+	   SetArray('2','162','31710','울주군');
+
+	   SetArray('2','163','47930','울진군');
+
+	   SetArray('2','164','42130','원주시');
+
+	   SetArray('2','165','30200','유성구');
+
+	   SetArray('2','166','11380','은평구');
+
+	   SetArray('2','167','43770','음성군');
+
+	   SetArray('2','168','48720','의령군');
+
+	   SetArray('2','169','47730','의성군');
+
+	   SetArray('2','170','41430','의왕시');
+
+	   SetArray('2','171','41150','의정부시');
+
+	   SetArray('2','172','41500','이천시');
+
+	   SetArray('2','173','45140','익산시');
+
+	   SetArray('2','174','42810','인제군');
+
+	   SetArray('2','175','45750','임실군');
+
+	   SetArray('2','176','46880','장성군');
+
+	   SetArray('2','177','45740','장수군');
+
+	   SetArray('2','178','46800','장흥군');
+
+	   SetArray('2','179','45110','전주시');
+
+	   SetArray('2','180','42770','정선군');
+
+	   SetArray('2','181','45180','정읍시');
+
+	   SetArray('2','182','50110','제주시');
+
+	   SetArray('2','183','43150','제천시');
+
+	   SetArray('2','184','11110','종로구');
+
+	   SetArray('2','185','11140','중구');
+
+	   SetArray('2','186','26110','중구');
+
+	   SetArray('2','187','27110','중구');
+
+	   SetArray('2','188','28110','중구');
+
+	   SetArray('2','189','30140','중구');
+
+	   SetArray('2','190','31110','중구');
+
+	   SetArray('2','191','11260','중랑구');
+
+	   SetArray('2','192','43745','증평군');
+
+	   SetArray('2','193','46900','진도군');
+
+	   SetArray('2','194','45720','진안군');
+
+	   SetArray('2','195','48170','진주시');
+
+	   SetArray('2','196','43750','진천군');
+
+	   SetArray('2','197','48740','창녕군');
+
+	   SetArray('2','198','48120','창원시');
+
+	   SetArray('2','199','44130','천안시');
+
+	   SetArray('2','200','42780','철원군');
+
+	   SetArray('2','201','47820','청도군');
+
+	   SetArray('2','202','47750','청송군');
+
+	   SetArray('2','203','44790','청양군');
+
+	   SetArray('2','204','43110','청주시');
+
+	   SetArray('2','205','42110','춘천시');
+
+	   SetArray('2','206','43130','충주시');
+
+	   SetArray('2','207','47850','칠곡군');
+
+	   SetArray('2','208','42190','태백시');
+
+	   SetArray('2','209','44825','태안군');
+
+	   SetArray('2','210','48220','통영시');
+
+	   SetArray('2','211','41480','파주시');
+
+	   SetArray('2','212','42760','평창군');
+
+	   SetArray('2','213','41220','평택시');
+
+	   SetArray('2','214','41650','포천시');
+
+	   SetArray('2','215','47110','포항시');
+
+	   SetArray('2','216','41450','하남시');
+
+	   SetArray('2','217','48850','하동군');
+
+	   SetArray('2','218','48730','함안군');
+
+	   SetArray('2','219','48870','함양군');
+
+	   SetArray('2','220','46860','함평군');
+
+	   SetArray('2','221','48890','합천군');
+
+	   SetArray('2','222','46820','해남군');
+
+	   SetArray('2','223','26350','해운대구');
+
+	   SetArray('2','224','44800','홍성군');
+
+	   SetArray('2','225','42720','홍천군');
+
+	   SetArray('2','226','41590','화성시');
+
+	   SetArray('2','227','46790','화순군');
+
+	   SetArray('2','228','42790','화천군');
+
+	   SetArray('2','229','42730','횡성군');
+
+
+
+	   SetArray('3','0','110','시내버스');
+
+	   SetArray('3','1','120','농어촌버스');
+
+	   SetArray('3','2','130','마을버스');
+
+	   SetArray('3','3','140','시외버스');
+
+	   SetArray('3','4','150','전세버스');
+
+	   SetArray('3','5','160','고속버스');
+
+	   SetArray('3','6','210','일반택시');
+
+	   SetArray('3','7','310','일반화물');
+
+	   SetArray('3','8','410','특수여객자동차');
+
+	   SetArray('3','9','510','무궁화');
+
+	   SetArray('3','10','520','새마을');
+
+	   SetArray('3','11','610','도시철도');
+
+	   SetArray('3','12','620','전철차량');
+
+	   SetArray('3','13','710','일반선');
+
+	   SetArray('3','14','720','고속선');
+
+	   SetArray('3','15','810','국내선');
+
+	   SetArray('3','16','820','국제선');
+
+
+
+        SetArray('4','0','0','고속국도');
+
+        SetArray('4','1','1','도시고속화도로');
+
+        SetArray('4','2','2','일반국도');
+
+
+
+        SetArray('5','0','00001','88올림픽고속도로');
+
+        SetArray('5','1','00002','경부고속도로');
+
+        SetArray('5','2','00003','경인고속도로');
+
+        SetArray('5','3','00004','경춘고속도로');
+
+        SetArray('5','4','00005','고창담양고속도로');
+
+        SetArray('5','5','00006','과천의왕간고속도로');
+
+        SetArray('5','6','00007','광주무안고속도로');
+
+        SetArray('5','7','00008','구마고속도로');
+
+        SetArray('5','8','00009','남해고속도로');
+
+        SetArray('5','9','00010','남해제1고속도로지선');
+
+        SetArray('5','10','00011','남해제2고속도로지선');
+
+        SetArray('5','11','00012','논산천안고속도로');
+
+        SetArray('5','12','00013','당진대전고속도로');
+
+        SetArray('5','13','00014','대구부산고속도로');
+
+        SetArray('5','14','00015','대구포항고속도로');
+
+        SetArray('5','15','00016','대전남부순환고속도로');
+
+        SetArray('5','16','00017','동해고속도로');
+
+        SetArray('5','17','00018','마산외곽고속도로');
+
+        SetArray('5','18','00019','봉담동탄고속도로');
+
+        SetArray('5','19','00020','부산울산고속도로');
+
+        SetArray('5','20','00021','서울외곽순환고속도로');
+
+        SetArray('5','21','00022','서천공주고속도로');
+
+        SetArray('5','22','00023','서해안고속도로');
+
+        SetArray('5','23','00024','영동고속도로');
+
+        SetArray('5','24','00025','용인서울고속도로');
+
+        SetArray('5','25','00026','울산고속도로');
+
+        SetArray('5','26','00027','익산포항고속도로');
+
+        SetArray('5','27','00028','인천국제공항고속도로');
+
+        SetArray('5','28','00029','인천대교고속도로');
+
+        SetArray('5','29','00030','제2경인고속도로');
+
+        SetArray('5','30','00031','제2중부고속도로');
+
+        SetArray('5','31','00032','제3경인고속도로');
+
+        SetArray('5','32','00033','중부내륙고속도로지선');
+
+        SetArray('5','33','00034','중부고속도로');
+
+        SetArray('5','34','00035','중부내륙고속도로');
+
+        SetArray('5','35','00036','중앙고속도로');
+
+        SetArray('5','36','00037','중앙고속도로지선');
+
+        SetArray('5','37','00038','청원상주주고속도로');
+
+        SetArray('5','38','00039','통영대전고속도로');
+
+        SetArray('5','39','00040','평택충주고속도로');
+
+        SetArray('5','40','00041','평택화성고속도로');
+
+        SetArray('5','41','00042','호남고속도로');
+
+        SetArray('5','42','00043','호남고속도로지선');
+
+        SetArray('5','43','10001','갑천도시고속화도로');
+
+        SetArray('5','44','10002','강변북로');
+
+        SetArray('5','45','10003','광안대로');
+
+        SetArray('5','46','10004','내부순환도로');
+
+        SetArray('5','47','10005','동부간선도로');
+
+        SetArray('5','48','10006','동서고가로');
+
+        SetArray('5','49','10007','번영로');
+
+        SetArray('5','50','10008','북부간선도로');
+
+        SetArray('5','51','10009','분당내곡간고속국도');
+
+        SetArray('5','52','10010','분당수서간고속도로');
+
+        SetArray('5','53','10011','서부간선도로');
+
+        SetArray('5','54','10012','송도해안도로');
+
+        SetArray('5','55','10013','신천대로');
+
+        SetArray('5','56','10014','올림픽대로');
+
+        SetArray('5','57','10015','우암고가로');
+
+        SetArray('5','58','10016','자유로');
+
+        SetArray('5','59','10017','장산로');
+
+        SetArray('5','60','10018','정관진입도로');
+
+        SetArray('5','61','10019','제2순환도로');
+
+        SetArray('5','62','10020','충장고가로');
+
+        SetArray('5','63','10021','해운로');
+
+        SetArray('5','64','20001','1호선');
+
+        SetArray('5','65','20002','2호선');
+
+        SetArray('5','66','20003','3호선');
+
+        SetArray('5','67','20004','4호선');
+
+        SetArray('5','68','20005','5호선');
+
+        SetArray('5','69','20006','6호선');
+
+        SetArray('5','70','20007','7호선');
+
+        SetArray('5','71','20013','13호선');
+
+        SetArray('5','72','20014','14호선');
+
+        SetArray('5','73','20015','15호선');
+
+        SetArray('5','74','20017','17호선');
+
+        SetArray('5','75','20018','18호선');
+
+        SetArray('5','76','20019','19호선');
+
+        SetArray('5','77','20020','20호선');
+
+        SetArray('5','78','20021','21호선');
+
+        SetArray('5','79','20022','22호선');
+
+        SetArray('5','80','20023','23호선');
+
+        SetArray('5','81','20024','24호선');
+
+        SetArray('5','82','20025','25호선');
+
+        SetArray('5','83','20026','26호선');
+
+        SetArray('5','84','20027','27호선');
+
+        SetArray('5','85','20028','28호선');
+
+        SetArray('5','86','20029','29호선');
+
+        SetArray('5','87','20030','30호선');
+
+        SetArray('5','88','20031','31호선');
+
+        SetArray('5','89','20032','32호선');
+
+        SetArray('5','90','20033','33호선');
+
+        SetArray('5','91','20034','34호선');
+
+        SetArray('5','92','20035','35호선');
+
+        SetArray('5','93','20036','36호선');
+
+        SetArray('5','94','20037','37호선');
+
+        SetArray('5','95','20038','38호선');
+
+        SetArray('5','96','20039','39호선');
+
+        SetArray('5','97','20040','40호선');
+
+        SetArray('5','98','20042','42호선');
+
+        SetArray('5','99','20043','43호선');
+
+        SetArray('5','100','20044','44호선');
+
+        SetArray('5','101','20045','45호선');
+
+        SetArray('5','102','20046','46호선');
+
+        SetArray('5','103','20047','47호선');
+
+        SetArray('5','104','20048','48호선');
+
+        SetArray('5','105','20056','56호선');
+
+        SetArray('5','106','20058','58호선');
+
+        SetArray('5','107','20059','59호선');
+
+        SetArray('5','108','20067','67호선');
+
+        SetArray('5','109','20075','75호선');
+
+        SetArray('5','110','20077','77호선');
+
+        SetArray('5','111','20079','79호선');
+
+        SetArray('5','112','20082','82호선');
+
+        SetArray('5','113','20087','87호선');
+
+        SetArray('5','114','20088','88호선');
+
+
+
+        SetArray('6','0','01','교통수단별');
+
+        SetArray('6','1','02','여객시설별');
+
+
+
+    	SetArray('7','0','014','궤(삭)도');
+
+    	SetArray('7','1','023','궤(삭)도');
+
+    	SetArray('7','2','021','도시/광역철도역사');
+
+    	SetArray('7','3','012','도시/광역철도차량');
+
+    	SetArray('7','4','025','여객선터미널');
+
+    	SetArray('7','5','024','여객자동차터미널');
+
+    	SetArray('7','6','022','철도역사');
+
+    	SetArray('7','7','011','철도차량');
+
+    	SetArray('7','8','013','항공기');
+
+
+
+
+        SetYear('1','0','2025');
+
+        SetYear('1','1','2024');
+
+        SetYear('1','2','2023');
+
+        SetYear('1','3','2022');
+
+        SetYear('1','4','2021');
+
+        SetYear('1','5','2020');
+
+        SetYear('1','6','2019');
+
+        SetYear('1','7','2018');
+
+        SetYear('1','8','2017');
+
+        SetYear('1','9','2016');
+
+        SetYear('1','10','2015');
+
+
+
+        SetYear('2','0','2026');
+
+        SetYear('2','1','2025');
+
+        SetYear('2','2','2024');
+
+        SetYear('2','3','2023');
+
+        SetYear('2','4','2022');
+
+        SetYear('2','5','2021');
+
+        SetYear('2','6','2020');
+
+        SetYear('2','7','2019');
+
+        SetYear('2','8','2018');
+
+        SetYear('2','9','2017');
+
+        SetYear('2','10','2016');
+
+        SetYear('2','11','2015');
+
+        SetYear('2','12','2014');
+
+        SetYear('2','13','2013');
+
+        SetYear('2','14','2012');
+
+        SetYear('2','15','2011');
+
+        SetYear('2','16','2010');
+
+        SetYear('2','17','2009');
+
+        SetYear('2','18','2008');
+
+        SetYear('2','19','2007');
+
+        SetYear('2','20','2006');
+
+        SetYear('2','21','2005');
+
+
+
+        SetYear('3','0','2024');
+
+        SetYear('3','1','2023');
+
+        SetYear('3','2','2022');
+
+        SetYear('3','3','2021');
+
+        SetYear('3','4','2020');
+
+        SetYear('3','5','2019');
+
+        SetYear('3','6','2018');
+
+        SetYear('3','7','2017');
+
+        SetYear('3','8','2016');
+
+        SetYear('3','9','2015');
+
+        SetYear('3','10','2014');
+
+        SetYear('3','11','2013');
+
+        SetYear('3','12','2012');
+
+        SetYear('3','13','2011');
+
+        SetYear('3','14','2010');
+
+        SetYear('3','15','2009');
+
+
+    sStandDate = "202512";
+
+    nujukStandDate = "2024";
+
+    transStandDate = "202610";
+</script>
+                
+<!-- 검색조건 데이터 표시 Start -->
+<script type="text/javascript">
+	function selectFirst() {
+	    fs = document.getElementById('sido');
+	    fs.options[0]=new Option('전국','');
+	     for(j=1 ;j <= arrcode1.length;j++) {    
+	         fs.options[j]=new Option(arrcode2[j-1],arrcode1[j-1]);
+	     }
+	     fs.length=j;
+	}
+	function selectSecond() {
+
+		var a = document.getElementById('sido').value;
+		a = a.substr(0,2);
+        fs = document.getElementById('jijacecls');;
+        var k = 0;
+        if(a == ""){
+        	fs.options[0]=new Option('광역시/도','00');
+        	fs.options[1]=new Option('30만이상시','01');
+        	fs.options[2]=new Option('30만미만시','02');
+        	
+        	fs.length=3;
+        }else{
+	        fs.options[0]=new Option('전체','99');
+        	
+        	fs.length=1;
+        }
+	}
+	
+	
+	function selectYear() {
+		 fs = document.getElementById('std_year');
+		 es = document.getElementById('end_year');
+	     for(j=0 ;j < jijaceyear.length;j++) {    
+	         fs.options[j]=new Option(jijaceyear[j]+"년",jijaceyear[j]);
+	         es.options[j]=new Option(jijaceyear[j]+"년",jijaceyear[j]);
+	     }
+	    
+	     fs.length=j;
+	     es.length=j;
+	}
+    
+	selectFirst();
+    selectYear();    
+    document.getElementById('stnDate').value = sStandDate.substr(0,4)+"년 " + sStandDate.substr(4,2)+"월";
+</script>
+<!-- 검색조건 데이터 표시 END -->
+</div>
+</body>
+</html>

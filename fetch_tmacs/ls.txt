@@ -1,0 +1,7 @@
+total 140
+drwxr-xr-x 2 runner runner   4096 Oct 19 12:54 .
+drwxr-xr-x 3 runner runner   4096 Oct 19 12:54 ..
+-rw-r--r-- 1 runner runner 130928 Oct 19 12:54 body.bin
+-rw-r--r-- 1 runner runner    303 Oct 19 12:54 headers.txt
+-rw-r--r-- 1 runner runner      0 Oct 19 12:54 ls.txt
+work/fetch/body.bin: HTML document, Unicode text, UTF-8 text, with CRLF, LF line terminators

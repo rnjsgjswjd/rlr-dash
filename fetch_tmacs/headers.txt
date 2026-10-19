@@ -1,0 +1,8 @@
+HTTP/1.1 200 OK
+Date: Mon, 19 Oct 2026 12:54:31 GMT
+Server: Apache
+Set-Cookie: WMONID=VglqAiBBW_u; Expires=Tue, 19-Oct-2027 21:54:31 GMT; Path=/
+Set-Cookie: JSESSIONID=2dNUFq9rDbw4T3dMpcz41G_JQrIjlV4A9hQ9gbit.tmacshome21; path=/
+Transfer-Encoding: chunked
+Content-Type: text/html;charset=UTF-8
+
