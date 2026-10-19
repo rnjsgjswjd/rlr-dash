@@ -1,13 +1,13 @@
--rw-r--r-- 1 runner runner 289590631 Oct 19 15:54 kr.osm.pbf
-total 419016
-drwxr-xr-x 2 runner runner      4096 Oct 19 15:54 .
-drwxr-xr-x 7 runner runner      4096 Oct 19 15:53 ..
--rw-r--r-- 1 runner runner 289590631 Oct 19 15:54 kr.osm.pbf
--rw-r--r-- 1 runner runner  34931347 Oct 19 15:54 lines.geojson
--rw-r--r-- 1 runner runner  17051203 Oct 19 15:54 lines.pbf
--rw-r--r-- 1 runner runner        61 Oct 19 15:54 log.txt
--rw-r--r-- 1 runner runner  48166575 Oct 19 15:54 polys.geojson
--rw-r--r-- 1 runner runner  39310455 Oct 19 15:54 polys.pbf
-{"pr": [32330, 586832], "sc": [47311, 864333], "tr": [24766, 448392], "rw": [21505, 390073], "mw": [20313, 370272], "rv": [2616, 50963], "cn": [328, 6034], "wt": [2731, 163689], "fo": [3457, 466221], "ur": [446, 16500]} 3363506
--rw-r--r-- 1 runner runner 3363506 Oct 19 15:54 basemap.json
--rw-r--r-- 1 runner runner 1428019 Oct 19 15:54 basemap.json.gz
+-rw-r--r-- 1 runner runner 289590631 Oct 19 16:19 kr.osm.pbf
+total 464616
+drwxr-xr-x 2 runner runner      4096 Oct 19 16:19 .
+drwxr-xr-x 7 runner runner      4096 Oct 19 16:18 ..
+-rw-r--r-- 1 runner runner 289590631 Oct 19 16:19 kr.osm.pbf
+-rw-r--r-- 1 runner runner  40137449 Oct 19 16:19 lines.geojson
+-rw-r--r-- 1 runner runner  17051203 Oct 19 16:19 lines.pbf
+-rw-r--r-- 1 runner runner        61 Oct 19 16:19 log.txt
+-rw-r--r-- 1 runner runner  89657265 Oct 19 16:20 polys.geojson
+-rw-r--r-- 1 runner runner  39310455 Oct 19 16:19 polys.pbf
+{"pr": [32344, 687815], "sc": [47330, 1087782], "tr": [24767, 484556], "rw": [21506, 417797], "mw": [20313, 395894], "rv": [2616, 258109], "cn": [328, 8847], "wt": [3552, 419934], "fo": [4322, 3525013], "ur": [947, 74554]} 7360498
+-rw-r--r-- 1 runner runner 7360498 Oct 19 16:20 basemap.json
+-rw-r--r-- 1 runner runner 2874363 Oct 19 16:20 basemap.json.gz
