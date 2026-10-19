@@ -7,7 +7,7 @@ on:
         default: "2021 2022 2023 2024"
       types:
         description: "유형: lg(지자체별) freezing(결빙) oldman(보행노인) child(보행어린이)"
-        default: "lg freezing"
+        default: "lg"
 permissions:
   contents: write
 jobs:
