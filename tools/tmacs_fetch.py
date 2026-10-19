@@ -14,10 +14,14 @@ for stand in ["all", "death", "serious"]:
     for y in want:
         for code, nm in sidos:
             data = urllib.parse.urlencode({"mid": "S1894", "sido": code, "stand": stand, "sYear": y, "eYear": y, "jijace_cls": "99"}).encode()
-            try:
-                txt = op.open(BASE + "/web/TG/TG200/TG2100/Tg2114_AJAX.jsp", data=data, timeout=60).read().decode("utf-8", "replace").strip()
-            except Exception as e:
-                txt = "ERR " + str(e)
+            txt = ""
+            for t in range(6):
+                try:
+                    txt = op.open(BASE + "/web/TG/TG200/TG2100/Tg2114_AJAX.jsp", data=data, timeout=90).read().decode("utf-8", "replace").strip()
+                    if txt.startswith("["): break
+                except Exception as e:
+                    txt = "ERR " + str(e)
+                time.sleep(3 + 3 * t)
             raw[f"{stand}_{y}_{code}"] = txt[:20000]
             try:
                 arr = json.loads(txt)
@@ -25,9 +29,10 @@ for stand in ["all", "death", "serious"]:
                 arr = []
             for r in arr if isinstance(arr, list) else []:
                 r = dict(r); r.update({"_stand": stand, "_year": y, "_sido": nm, "_sidocd": code}); rows.append(r)
-            time.sleep(0.3)
+            time.sleep(0.8)
 json.dump(raw, open("out/raw.json", "w"), ensure_ascii=False)
 keys = sorted({k for r in rows for k in r})
 with open("out/tmacs_jijace.csv", "w", newline="", encoding="utf-8-sig") as f:
     w = csv.DictWriter(f, fieldnames=keys); w.writeheader(); [w.writerow(r) for r in rows]
-print("years", years, "rows", len(rows), "keys", keys)
+bad = [k for k, v in raw.items() if not v.startswith("[")]
+print("years", years, "rows", len(rows), "failed", len(bad), bad[:30], "keys", keys)
