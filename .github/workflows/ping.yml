@@ -1,20 +1,25 @@
 name: ping
 on: workflow_dispatch
+permissions:
+  contents: write
 jobs:
   ping:
     runs-on: ubuntu-latest
     steps:
-      - name: data.go.kr reachability
+      - name: probe
         run: |
-          curl -sS -m 30 -w "\nHTTP %{http_code}\n" "https://apis.data.go.kr/B552061/frequentzoneLg/getRestFrequentzoneLg?ServiceKey=TEST&searchYearCd=2023&siDo=11&guGun=200&type=json&numOfRows=1&pageNo=1" | head -c 600 || true
-      - name: code list via PublicDataReader
-        run: |
-          pip install -q PublicDataReader 2>&1 | tail -1
-          python - <<'PY'
+          mkdir out
+          curl -sS -m 30 -w "\nHTTP %{http_code}\n" "https://apis.data.go.kr/B552061/frequentzoneLg/getRestFrequentzoneLg?ServiceKey=TEST&searchYearCd=2023&siDo=11&guGun=200&type=json&numOfRows=1&pageNo=1" > out/api.txt 2>&1 || true
+          pip install -q PublicDataReader > out/pip.txt 2>&1 || true
+          python - > out/codes.txt 2>&1 <<'PY'
           import PublicDataReader as pdr
-          try:
-              df = pdr.code_bdong()
-              print(df.columns.tolist()); print(df.head(3).to_string()); print(len(df))
-          except Exception as e:
-              print("ERR", e)
+          df = pdr.code_bdong()
+          print(df.columns.tolist()); print(len(df)); print(df.head(5).to_string())
+          df.to_csv("out/bdong.csv", index=False, encoding="utf-8-sig")
           PY
+          true
+      - name: push results
+        run: |
+          cd out && git init -q && git checkout -q -b probe && git add -A
+          git -c user.name=bot -c user.email=bot@users.noreply.github.com commit -qm probe
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" probe
