@@ -1,0 +1,18 @@
+name: collect-tmacs
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  tmacs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - run: python tools/tmacs_fetch.py > tmacs_log.txt 2>&1 || true; mkdir -p out; cp tmacs_log.txt out/
+      - name: 결과 저장 (data 브랜치에 누적)
+        run: |
+          git config --global user.name bot; git config --global user.email bot@users.noreply.github.com
+          git clone -q --branch data --depth 1 "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" pub
+          rm -rf pub/tmacs && cp -r out pub/tmacs
+          cd pub && git add -A && git commit -qm "tmacs" || true
+          git push "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" data
