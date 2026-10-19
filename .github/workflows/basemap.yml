@@ -2,8 +2,8 @@ name: build-basemap
 on:
   workflow_dispatch:
     inputs:
-      tol_line: { description: "선 단순화(m)", default: "40" }
-      tol_poly: { description: "면 단순화(m)", default: "60" }
+      tol_line: { description: "선 단순화(도 단위, 0.0004≈40m)", default: "0.0004" }
+      tol_poly: { description: "면 단순화(도 단위)", default: "0.0006" }
 permissions:
   contents: write
 jobs:
