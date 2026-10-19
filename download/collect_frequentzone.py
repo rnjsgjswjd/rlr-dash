@@ -81,7 +81,7 @@ def main():
     ap.add_argument("--codes", help="법정동코드 전체자료 파일 경로"); ap.add_argument("--out", default="사고다발지역_수집.csv")
     a = ap.parse_args()
     here = os.path.dirname(os.path.abspath(__file__))
-    key = a.key or input("인증키를 붙여넣으세요: ").strip()
+    key = a.key or os.environ.get("DATA_GO_KR_KEY") or input("인증키를 붙여넣으세요: ").strip()
     key = urllib.parse.unquote(key)  # Encoding 키를 넣어도 동작
     years = a.years or input("연도 (여러 개는 띄어쓰기, 예: 2021 2022 2023): ").split()
     types = a.types or (input("유형 (lg=지자체별, freezing=결빙, oldman=보행노인, child=보행어린이 / 기본 lg): ").split() or ["lg"])
@@ -97,6 +97,8 @@ def main():
     js = call(svc, op, key, years[0], "11", "200", 1, 5)
     rc = str(js.get("resultCode", ""))
     print(f"[확인] 응답 코드 {rc} {js.get('resultMsg', '')}")
+    try: json.dump(js, open(os.path.join(here, "probe.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    except Exception: pass
     if rc not in ("00", "0", "0000", "INFO-000") and not items_of(js) and js.get("totalCount") is None:
         print("[!] 정상 응답이 아닙니다. 인증키 등록 대기(발급 후 최대 1시간), 활용신청 여부, 키 복사를 확인하세요."); sys.exit(1)
 
