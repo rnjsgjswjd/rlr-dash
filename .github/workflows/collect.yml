@@ -1,0 +1,48 @@
+name: collect-frequentzone
+on:
+  workflow_dispatch:
+    inputs:
+      years:
+        description: "연도(띄어쓰기로 여러 개)"
+        default: "2021 2022 2023 2024"
+      types:
+        description: "유형: lg(지자체별) freezing(결빙) oldman(보행노인) child(보행어린이)"
+        default: "lg freezing"
+permissions:
+  contents: write
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - name: 법정동 코드표 준비
+        run: |
+          mkdir -p work && cp download/collect_frequentzone.py work/
+          pip install -q PublicDataReader
+          python - <<'PY'
+          import PublicDataReader as pdr
+          df = pdr.code_bdong()
+          with open("work/법정동코드 전체자료.txt", "w", encoding="utf-8") as f:
+              f.write("법정동코드\t법정동명\t폐지여부\n")
+              for _, r in df.iterrows():
+                  dead = str(r["말소일자"]).strip()
+                  alive = "존재" if dead in ("", "nan", "None") else "폐지"
+                  f.write(f"{r['법정동코드']}\t{r['시도명']} {r['시군구명']} {r['읍면동명']}\t{alive}\n")
+          PY
+      - name: 수집
+        env:
+          DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
+        run: |
+          cd work
+          if [ -z "$DATA_GO_KR_KEY" ]; then echo "NO_SECRET" > status.txt; exit 0; fi
+          python collect_frequentzone.py --years ${{ inputs.years }} --types ${{ inputs.types }} > log.txt 2>&1 || true
+          tr '\r' '\n' < log.txt | tail -40 > status.txt
+      - name: 결과 저장 (data 브랜치)
+        run: |
+          mkdir pub && cp work/status.txt pub/
+          cp work/*.csv pub/ 2>/dev/null || true
+          cp work/probe.json pub/ 2>/dev/null || true
+          cd pub && git init -q && git checkout -q -b data && git add -A
+          git -c user.name=bot -c user.email=bot@users.noreply.github.com commit -qm "collect"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" data
