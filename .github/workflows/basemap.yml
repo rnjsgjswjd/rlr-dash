@@ -1,0 +1,34 @@
+name: build-basemap
+on:
+  workflow_dispatch:
+    inputs:
+      tol_line: { description: "선 단순화(m)", default: "40" }
+      tol_poly: { description: "면 단순화(m)", default: "60" }
+permissions:
+  contents: write
+jobs:
+  basemap:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq gdal-bin osmium-tool > /dev/null
+      - name: OSM 한국 데이터
+        run: |
+          mkdir -p bm && cd bm
+          curl -sSL -o kr.osm.pbf https://download.geofabrik.de/asia/south-korea-latest.osm.pbf
+          ls -la kr.osm.pbf > log.txt
+          osmium tags-filter kr.osm.pbf w/highway=motorway,trunk,primary,secondary w/railway=rail w/waterway=river,canal -o lines.pbf --overwrite
+          osmium tags-filter kr.osm.pbf nwr/natural=water,wood nwr/landuse=reservoir,forest,residential,commercial,industrial,retail -o polys.pbf --overwrite
+          ogr2ogr -f GeoJSON lines.geojson lines.pbf lines -t_srs EPSG:5179 -simplify ${{ inputs.tol_line }} -select highway,waterway,railway
+          ogr2ogr -f GeoJSON polys.geojson polys.pbf multipolygons -t_srs EPSG:5179 -simplify ${{ inputs.tol_poly }} -select natural,landuse
+          ls -la >> log.txt
+          python ../tools/basemap.py >> log.txt 2>&1
+          gzip -k -9 basemap.json; ls -la basemap.json* >> log.txt
+      - name: 결과 저장 (data 브랜치)
+        run: |
+          git config --global user.name bot; git config --global user.email bot@users.noreply.github.com
+          git clone -q --branch data --depth 1 "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" pub
+          mkdir -p pub/basemap && cp bm/log.txt bm/basemap.json pub/basemap/
+          cd pub && git add -A && git commit -qm "basemap" || true
+          git push "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" data
