@@ -63,6 +63,12 @@ def call(svc, op, key, year, sido, gugun, page, rows=100, tries=3):
                 return json.loads(body)
             except json.JSONDecodeError:
                 return {"resultCode": "XML", "resultMsg": body[:300]}
+        except urllib.error.HTTPError as e:
+            body = e.read().decode("utf-8", "replace")
+            try: js = json.loads(body)
+            except json.JSONDecodeError: js = {}
+            h = (js.get("OpenAPI_ServiceResponse") or {}).get("cmmMsgHeader") or {}
+            return {"resultCode": h.get("returnReasonCode", str(e.code)), "resultMsg": h.get("errMsg", body[:300]) + (" / " + h.get("returnAuthMsg", "") if h else "")}
         except (urllib.error.URLError, TimeoutError) as e:
             if t == tries - 1: return {"resultCode": "NET", "resultMsg": str(e)}
             time.sleep(1.5 * (t + 1))
