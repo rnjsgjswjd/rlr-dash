@@ -29,7 +29,7 @@ TYPES = {  # 유형코드: (서비스명, 오퍼레이션명, 한글 이름)
 OUT_COLS = ["유형", "연도", "시도코드", "구군코드", "시군구", "지점명", "위도", "경도", "발생건수", "사상자수", "사망자수", "중상자수", "경상자수", "부상신고자수", "다발지역ID", "법정동코드"]
 
 
-def read_codes(path):
+def read_codes(path, include_abolished=False, sido=None):
     """법정동코드 전체자료 → [(시도2, 구군3, 이름)] (현존 시군구만)"""
     raw = open(path, "rb").read()
     for enc in ("utf-8-sig", "cp949", "euc-kr"):
@@ -42,13 +42,14 @@ def read_codes(path):
         p = line.replace(",", "\t").split("\t")
         if len(p) < 3: continue
         code, name, alive = p[0].strip(), p[1].strip(), p[2].strip()
-        if len(code) != 10 or alive != "존재": continue
+        if len(code) != 10 or (alive != "존재" and not include_abolished): continue
+        if sido and code[:2] not in sido: continue
         if code[5:] != "00000" or code[2:5] == "000": continue  # 시군구 단위만
         key = (code[:2], code[2:5])
         if key in seen: continue
         seen.add(key); out.append((code[:2], code[2:5], name))
     # 세종시는 시군구 아래 단계가 없어 '36110'로 들어오는 경우가 많음
-    if not any(s == "36" for s, _, _ in out): out.append(("36", "110", "세종특별자치시"))
+    if not any(s == "36" for s, _, _ in out) and (not sido or "36" in sido): out.append(("36", "110", "세종특별자치시"))
     return out
 
 
@@ -84,7 +85,7 @@ def items_of(js):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--key"); ap.add_argument("--years", nargs="*"); ap.add_argument("--types", nargs="*")
-    ap.add_argument("--codes", help="법정동코드 전체자료 파일 경로"); ap.add_argument("--out", default="사고다발지역_수집.csv")
+    ap.add_argument("--codes", help="법정동코드 전체자료 파일 경로"); ap.add_argument("--sido", nargs="*", help="시도코드만 (예: 42 45)"); ap.add_argument("--all-codes", action="store_true", help="폐지된 옛 코드도 포함(강원 42·전북 45 등)"); ap.add_argument("--out", default="사고다발지역_수집.csv")
     a = ap.parse_args()
     here = os.path.dirname(os.path.abspath(__file__))
     key = a.key or os.environ.get("DATA_GO_KR_KEY") or input("인증키를 붙여넣으세요: ").strip()
@@ -95,7 +96,7 @@ def main():
     codes_path = a.codes or next(iter(sorted(glob.glob(os.path.join(here, "*법정동*코드*.txt")) + glob.glob(os.path.join(here, "*법정동*.txt")))), None)
     if not codes_path or not os.path.exists(codes_path):
         print("\n[!] 법정동코드 전체자료 파일을 찾지 못했습니다. code.go.kr 에서 '전체자료'를 받아 이 스크립트와 같은 폴더에 두세요."); sys.exit(1)
-    codes = read_codes(codes_path)
+    codes = read_codes(codes_path, a.all_codes, set(a.sido) if a.sido else None)
     print(f"시군구 {len(codes)}곳 · 연도 {years} · 유형 {[TYPES[t][2] for t in types]}")
 
     # 1) 키·API 확인 (서울 성동구)
@@ -109,7 +110,7 @@ def main():
         print("[!] 정상 응답이 아닙니다. 인증키 등록 대기(발급 후 최대 1시간), 활용신청 여부, 키 복사를 확인하세요."); sys.exit(1)
 
     out_path = os.path.join(here, a.out)
-    n_call = n_row = 0; seen = set()  # 시(상위)와 구(하위) 코드가 겹쳐 같은 지점이 두 번 오는 경우 제거
+    empty = []; n_call = n_row = 0; seen = set()  # 시(상위)와 구(하위) 코드가 겹쳐 같은 지점이 두 번 오는 경우 제거
     with open(out_path, "w", newline="", encoding="utf-8-sig") as f:
         w = csv.writer(f); w.writerow(OUT_COLS)
         for t in types:
@@ -123,6 +124,7 @@ def main():
                         if rc in ("22", "LIMITED_NUMBER_OF_SERVICE_REQUESTS_EXCEEDS_ERROR"):
                             print("\n[!] 오늘 호출 한도를 넘었습니다. 내일 이어서 실행하세요(이미 받은 결과는 저장됨)."); f.flush(); return
                         its = items_of(js)
+                        if page == 1 and not its: empty.append(f"{y}/{sd}{gg}/{rc}/{js.get('resultMsg', '')}"[:120])
                         for it in its:
                             uid = (tname, y, it.get("afos_id"), it.get("afos_fid"), it.get("spot_cd"), it.get("la_crd"), it.get("lo_crd"))
                             if uid in seen: continue
@@ -138,6 +140,7 @@ def main():
                     print(f"\r{tname} {y}년 {i + 1}/{len(codes)} {nm[:14]:<14} 누적 {n_row}건 (호출 {n_call})", end="", flush=True)
                     time.sleep(0.05)
                 print()
+    if empty: print(f"\n결과 없는 호출 {len(empty)}건 (앞 30개):\n" + "\n".join(empty[:30]))
     print(f"\n완료: {out_path}\n지점 {n_row}건 · 호출 {n_call}회 → 대시보드 [BETA TEST > 사고다발지역 > 외부 데이터 불러오기]로 넣으세요.")
 
 

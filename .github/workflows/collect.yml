@@ -8,6 +8,15 @@ on:
       types:
         description: "유형: lg(지자체별) freezing(결빙) oldman(보행노인) child(보행어린이)"
         default: "lg"
+      extra:
+        description: "추가 옵션 (예: --sido 42 45 --all-codes)"
+        default: ""
+      tag:
+        description: "결과 파일 이름 꼬리표"
+        default: "main"
+      fetch_url:
+        description: "(선택) 함께 내려받을 공개 통계 파일 URL"
+        default: ""
 permissions:
   contents: write
 jobs:
@@ -31,18 +40,29 @@ jobs:
                   f.write(f"{r['법정동코드']}\t{r['시도명']} {r['시군구명']} {r['읍면동명']}\t{alive}\n")
           PY
       - name: 수집
+        if: ${{ inputs.types != 'none' }}
         env:
           DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
         run: |
           cd work
           if [ -z "$DATA_GO_KR_KEY" ]; then echo "NO_SECRET" > status.txt; exit 0; fi
-          python collect_frequentzone.py --years ${{ inputs.years }} --types ${{ inputs.types }} > log.txt 2>&1 || true
-          tr '\r' '\n' < log.txt | tail -40 > status.txt
-      - name: 결과 저장 (data 브랜치)
+          python collect_frequentzone.py --years ${{ inputs.years }} --types ${{ inputs.types }} ${{ inputs.extra }} --out "fz_${{ inputs.tag }}.csv" > log.txt 2>&1 || true
+          tr '\r' '\n' < log.txt | grep -v "누적" | tail -60 > status.txt
+          tr '\r' '\n' < log.txt | grep "누적" | tail -3 >> status.txt
+      - name: 공개 파일 내려받기
+        if: ${{ inputs.fetch_url != '' }}
         run: |
-          mkdir pub && cp work/status.txt pub/
-          cp work/*.csv pub/ 2>/dev/null || true
-          cp work/probe.json pub/ 2>/dev/null || true
-          cd pub && git init -q && git checkout -q -b data && git add -A
-          git -c user.name=bot -c user.email=bot@users.noreply.github.com commit -qm "collect"
-          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" data
+          mkdir -p work/fetch
+          curl -sSL -m 120 -A "Mozilla/5.0" -D work/fetch/headers.txt -o work/fetch/body.bin "${{ inputs.fetch_url }}" || echo "curl failed" > work/fetch/err.txt
+          ls -la work/fetch > work/fetch/ls.txt; file work/fetch/body.bin >> work/fetch/ls.txt || true
+      - name: 결과 저장 (data 브랜치에 누적)
+        run: |
+          git config --global user.name bot; git config --global user.email bot@users.noreply.github.com
+          git clone -q --branch data --depth 1 "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" pub || (mkdir pub && cd pub && git init -q && git checkout -q -b data)
+          T="${{ inputs.tag }}"
+          cp work/status.txt "pub/status_$T.txt" 2>/dev/null || true
+          cp work/fz_*.csv pub/ 2>/dev/null || true
+          cp work/probe.json "pub/probe_$T.json" 2>/dev/null || true
+          if [ -d work/fetch ]; then rm -rf "pub/fetch_$T"; cp -r work/fetch "pub/fetch_$T"; fi
+          cd pub && git add -A && git commit -qm "collect $T" || true
+          git push "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" data
