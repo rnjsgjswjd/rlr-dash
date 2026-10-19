@@ -4,4 +4,17 @@ jobs:
   ping:
     runs-on: ubuntu-latest
     steps:
-      - run: echo ok
+      - name: data.go.kr reachability
+        run: |
+          curl -sS -m 30 -w "\nHTTP %{http_code}\n" "https://apis.data.go.kr/B552061/frequentzoneLg/getRestFrequentzoneLg?ServiceKey=TEST&searchYearCd=2023&siDo=11&guGun=200&type=json&numOfRows=1&pageNo=1" | head -c 600 || true
+      - name: code list via PublicDataReader
+        run: |
+          pip install -q PublicDataReader 2>&1 | tail -1
+          python - <<'PY'
+          import PublicDataReader as pdr
+          try:
+              df = pdr.code_bdong()
+              print(df.columns.tolist()); print(df.head(3).to_string()); print(len(df))
+          except Exception as e:
+              print("ERR", e)
+          PY
