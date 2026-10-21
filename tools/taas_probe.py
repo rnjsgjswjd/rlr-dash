@@ -29,7 +29,7 @@ for t, (svc, op, nm) in CAND.items():
         if st in ("00", "03"): break
         time.sleep(0.3)
     ok = st in ("00", "03")  # 03 = 자료 없음(서비스는 열림)
-    out["types"][t] = {"name": nm, "service": svc, "ok": ok, "code": st, "msg": msg, "state": "사용 가능" if ok else ("활용신청 필요" if st in ("30", "20") or "REGISTERED" in msg.upper() else ("서비스 없음/이름 다름" if st in ("404", "XML") else "오류"))}
+    out["types"][t] = {"name": nm, "service": svc, "ok": ok, "code": st, "msg": msg, "state": "사용 가능" if ok else ("활용신청 필요" if st in ("30", "20") or "REGISTERED" in msg.upper() else ("서비스 없음/이름 다름" if st in ("404", "XML", "12") else "오류"))}
     print(t, nm, st, msg[:80])
 json.dump(out, open(sys.argv[1] if len(sys.argv) > 1 else "api_status.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 print("AVAILABLE", " ".join(t for t, v in out["types"].items() if v["ok"]))
