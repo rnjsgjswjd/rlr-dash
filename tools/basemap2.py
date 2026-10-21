@@ -87,16 +87,16 @@ with open(src, encoding="utf-8") as f:
                     d = enc(dp(pts, tol))
                     if d: ov.setdefault(lay, []).append(d)
             if lay in ("mi", "st"):
-                if lay == "st" and L < 30: continue
-                d = enc(dp(pts, 0.7))
+                if (lay == "st" and L < 60) or (lay == "mi" and L < 4): continue
+                d = enc(dp(pts, 1.0 if lay == "mi" else 1.4))
                 if d: put(t2, T2S, lay + ("T" if tun and lay == "mi" else ""), pts, d)
             else:
-                d = enc(dp(pts, 0.9))
+                d = enc(dp(pts, 1.3 if lay in ("rv", "cn") else 0.9))
                 if d: put(t1, T1S, lay + ("T" if tun and lay in ("mw", "tr", "pr", "sc", "te") else ""), pts, d)
             # 도로 이름 라벨 후보: 타일·이름별 가장 긴 구간
             name = nm(p) if lay in RD.values() else ""
             if lay in ("mw", "tr") and not name: name = (p.get("ref") or "").split(";")[0]
-            if name and L >= (40 if lay in ("mw", "tr", "pr") else 25 if lay in ("sc", "te") else 15) and not tun:
+            if name and L >= (40 if lay in ("mw", "tr", "pr") else 25 if lay in ("sc", "te") else 30) and not tun:
                 half, acc, k = L / 2, 0, 0
                 for k in range(len(pts) - 1):
                     s = math.hypot(pts[k + 1][0] - pts[k][0], pts[k + 1][1] - pts[k][1])
@@ -127,6 +127,17 @@ with open(src, encoding="utf-8") as f:
                 elif lay == "wt" and A >= 6:
                     d = "".join(enc(q, True) for q in (dp(r, 0.8) for r in rings) if len(q) >= 4)
                     if d: put(t1 if A >= 60 else t2, T1S if A >= 60 else T2S, "wt", rings[0], d)
+pts_lab = {}
+for store, size in ((lb1, T1S), (lb2, T2S)):
+    for k in list(store):
+        keep = []
+        for r in store[k]:
+            if r[4] in ("jc", "p1", "p2"):
+                g = pts_lab.setdefault((r[4], r[3]), [])
+                if any(abs(r[0] - q[0]) + abs(r[1] - q[1]) < (250 if r[4] == "jc" else 120) for q in g): continue
+                g.append(r)
+            keep.append(r)
+        store[k] = keep
 for (lv, tile, name), (L, rec) in roadlab.items():
     (lb1 if lv == "1" else lb2).setdefault(tile, []).append(rec)
 def join(store): return {k: {l: "".join(v) for l, v in d.items()} for k, d in store.items()}
