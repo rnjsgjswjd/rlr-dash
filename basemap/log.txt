@@ -1,17 +1,17 @@
 TS=2026-10-20T20:23:47Z
--rw-r--r-- 1 runner runner 289705086 Oct 21 17:17 kr.osm.pbf
--rw-r--r-- 1 runner runner 727252461 Oct 21 17:17 f.geojsonseq
--rw-r--r-- 1 runner runner 110883957 Oct 21 17:17 f.pbf
+-rw-r--r-- 1 runner runner 289705086 Oct 21 17:22 kr.osm.pbf
+-rw-r--r-- 1 runner runner 727252461 Oct 21 17:22 f.geojsonseq
+-rw-r--r-- 1 runner runner 110883957 Oct 21 17:22 f.pbf
 features 1224269
 overview KB {'pr': 245, 'sc': 279, 'tr': 785, 'mw': 624, 'rv': 283, 'rw': 75, 'wt': 368, 'ur': 39, 'fo': 879, 'cn': 3}
-T1 tiles 349 KB {'te': 2507, 'teT': 0, 'pr': 979, 'mw': 615, 'rv': 978, 'sc': 1534, 'tr': 792, 'mwT': 4, 'wt': 654, 'trT': 5, 'scT': 3, 'rw': 196, 'prT': 2, 'cn': 2}
-T2 tiles 4610 KB {'mi': 11281, 'miT': 0, 'st': 1456, 'wt': 18}
-labels L1 23467 888 KB · L2 85987 3421 KB
-total KB 34796
+T1 tiles 349 KB {'te': 2507, 'teT': 0, 'pr': 979, 'mw': 615, 'rv': 840, 'sc': 1534, 'tr': 792, 'mwT': 4, 'wt': 654, 'trT': 5, 'scT': 3, 'rw': 196, 'prT': 2, 'cn': 2}
+T2 tiles 4607 KB {'mi': 9179, 'miT': 0, 'st': 586, 'wt': 18}
+labels L1 22156 840 KB · L2 56465 2184 KB
+total KB 30265
 35
 /usr/lib/python3/dist-packages/osgeo/gdal.py:606: FutureWarning: Neither gdal.UseExceptions() nor gdal.DontUseExceptions() has been explicitly called. In GDAL 4.0, exceptions will be enabled by default.
   warnings.warn(
-flat 181.0 ov KB 458 tiles 182 KB 6917
--rw-r--r-- 1 runner runner 42175312 Oct 21 17:19 basemap2.json
--rw-r--r-- 1 runner runner 18094934 Oct 21 17:19 basemap2.json.gz
--rw-r--r-- 1 runner runner  5544877 Oct 21 17:19 hs.json.gz
+flat 181.0 ov KB 342 tiles 181 KB 3595
+-rw-r--r-- 1 runner runner 34205152 Oct 21 17:23 basemap2.json
+-rw-r--r-- 1 runner runner 14228225 Oct 21 17:23 basemap2.json.gz
+-rw-r--r-- 1 runner runner  2965977 Oct 21 17:23 hs.json.gz
