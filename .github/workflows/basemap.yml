@@ -1,34 +1,62 @@
 name: build-basemap
+# 최신 OSM(Geofabrik 매일 갱신) + Copernicus DEM → 배경지도 팩(basemap/basemap2.json.gz, data 브랜치)
+# 매월 3일 04:00(KST) 자동, 필요하면 수동 실행
 on:
   workflow_dispatch:
     inputs:
-      tol_line: { description: "선 단순화(도 단위, 0.0004≈40m)", default: "0.0004" }
-      tol_poly: { description: "면 단순화(도 단위)", default: "0.0006" }
+      dem: { description: "지형 음영도 새로 만들기 (DEM은 거의 안 바뀜)", default: "auto" }
+  schedule:
+    - cron: "0 19 2 * *"
 permissions:
   contents: write
 jobs:
   basemap:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 150
     steps:
       - uses: actions/checkout@v4
-      - run: sudo apt-get update -qq && sudo apt-get install -y -qq gdal-bin osmium-tool > /dev/null
-      - name: OSM 한국 데이터
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq gdal-bin python3-gdal python3-numpy python3-pil python3-pyproj osmium-tool > /dev/null
+      - name: 기존 결과 가져오기 (지형 음영 재사용)
+        run: |
+          git clone -q --branch data --depth 1 "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" pub
+          ls -la pub/basemap || true
+      - name: OSM 한국 최신 데이터
         run: |
           mkdir -p bm && cd bm
           curl -sSL -o kr.osm.pbf https://download.geofabrik.de/asia/south-korea-latest.osm.pbf
-          ls -la kr.osm.pbf > log.txt
-          osmium tags-filter kr.osm.pbf w/highway=motorway,trunk,primary,secondary w/railway=rail w/waterway=river,canal -o lines.pbf --overwrite
-          osmium tags-filter kr.osm.pbf nwr/natural=water,wood nwr/landuse=reservoir,forest,residential,commercial,industrial,retail -o polys.pbf --overwrite
-          ogr2ogr -f GeoJSON lines.geojson lines.pbf lines -t_srs EPSG:5179 -simplify ${{ inputs.tol_line }} -select highway,waterway,railway
-          ogr2ogr -f GeoJSON polys.geojson polys.pbf multipolygons -t_srs EPSG:5179 -simplify ${{ inputs.tol_poly }} -select natural,landuse
-          ls -la >> log.txt
-          python ../tools/basemap.py >> log.txt 2>&1
-          gzip -k -9 basemap.json; ls -la basemap.json* >> log.txt
-      - name: 결과 저장 (data 브랜치)
+          TS=$(osmium fileinfo -g header.option.osmosis_replication_timestamp kr.osm.pbf || true); echo "TS=$TS" | tee -a log.txt
+          echo "$TS" > ts.txt; ls -la kr.osm.pbf >> log.txt
+          osmium tags-filter kr.osm.pbf \
+            w/highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link,secondary,secondary_link,tertiary,tertiary_link,unclassified,residential,living_street \
+            w/railway=rail,light_rail w/waterway=river,canal,stream \
+            nwr/natural=water,wood nwr/landuse=reservoir,forest,residential,commercial,industrial,retail nwr/waterway=riverbank \
+            n/place=town,suburb,village,quarter,neighbourhood n/highway=motorway_junction \
+            -o f.pbf --overwrite
+          osmium export f.pbf -f geojsonseq -o f.geojsonseq --overwrite -a type
+          ls -la f.pbf f.geojsonseq >> log.txt
+          /usr/bin/python3 ../tools/basemap2.py f.geojsonseq basemap2_osm.json "$(echo $TS | cut -c1-10)" 2>&1 | tee -a log.txt
+      - name: 지형 음영 (Copernicus DEM 30m)
         run: |
-          git config --global user.name bot; git config --global user.email bot@users.noreply.github.com
-          git clone -q --branch data --depth 1 "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" pub
-          mkdir -p pub/basemap && cp bm/log.txt bm/basemap.json pub/basemap/
-          cd pub && git add -A && git commit -qm "basemap" || true
-          git push "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" data
+          cd bm
+          if [ "${{ inputs.dem }}" != "yes" ] && [ -f ../pub/basemap/hs.json.gz ]; then cp ../pub/basemap/hs.json.gz . && gunzip -f hs.json.gz && echo "DEM 재사용" | tee -a log.txt; exit 0; fi
+          mkdir -p dem
+          for la in 33 34 35 36 37 38; do for lo in 124 125 126 127 128 129 130 131; do
+            n="Copernicus_DSM_COG_10_N${la}_00_E${lo}_00_DEM"; echo "https://copernicus-dem-30m.s3.amazonaws.com/$n/$n.tif"; done; done > urls.txt
+          cat urls.txt | xargs -P 8 -I{} sh -c 'curl -sf -o dem/$(basename {}) {} || true'
+          ls dem | wc -l | tee -a log.txt
+          gdalbuildvrt dem.vrt dem/*.tif
+          XMIN=741111.0312999999; YMAX=2073441.1553000007; XMAX=$(python3 -c "print($XMIN+56791*10)"); YMIN=$(python3 -c "print($YMAX-61983*10)")
+          gdalwarp -q -t_srs EPSG:5179 -te $XMIN $YMIN $XMAX $YMAX -tr 60 60 -r average -dstnodata 0 -co COMPRESS=DEFLATE -multi -wo NUM_THREADS=ALL_CPUS dem.vrt dem60.tif
+          gdaldem hillshade dem60.tif hs60.tif -z 1.8 -multidirectional -compute_edges -q
+          /usr/bin/python3 ../tools/dem_hs.py hs60.tif dem60.tif hs.json 2>&1 | tee -a log.txt
+      - name: 합치기·저장 (data 브랜치)
+        run: |
+          cd bm
+          /usr/bin/python3 -c "
+          import json; a=json.load(open('basemap2_osm.json')); a['HS']=json.load(open('hs.json')); json.dump(a,open('basemap2.json','w'),ensure_ascii=False,separators=(',',':'))"
+          ls -la basemap2.json | tee -a log.txt
+          gzip -k -9 -f basemap2.json; gzip -k -9 -f hs.json; ls -la *.gz | tee -a log.txt
+          mkdir -p ../pub/basemap && cp log.txt basemap2.json.gz hs.json.gz ts.txt ../pub/basemap/
+          cd ../pub && git config user.name bot && git config user.email bot@users.noreply.github.com
+          git add -A && git commit -qm "basemap2 $(cat basemap/ts.txt)" || true
+          git push -q origin data
