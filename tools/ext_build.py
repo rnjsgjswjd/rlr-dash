@@ -53,10 +53,17 @@ if os.path.exists(fn):
     tm = {"asof": today, "years": sorted({r[2] for r in rows}), "rows": rows}
     print("TMACS", tm["years"], len(rows))
 
+kma = None; fn = os.path.join(D, "kma", "kma_asos_yearly.csv")
+if os.path.exists(fn):
+    rr = list(csv.DictReader(open(fn, encoding="utf-8-sig")))
+    if rr:
+        cols = [c for c in rr[0] if c not in ("stnId", "stnNm", "year")]
+        kma = {"asof": today, "cols": cols, "years": sorted({int(r["year"]) for r in rr}), "rows": [[int(r["stnId"]), r["stnNm"], int(r["year"])] + [f(r[c]) for c in cols] for r in rr]}
+        print("KMA", kma["years"], len(rr))
 api = json.load(open(os.path.join(D, "ext", "api_status.json"), encoding="utf-8")) if os.path.exists(os.path.join(D, "ext", "api_status.json")) else None
 main = taas.get("지자체별")
-bundle = {"kind": "rlr-ext", "v": 1, "asof": today, "taas": main, "taasT": {t: v["pts"] for t, v in taas.items() if t != "지자체별"}, "tmacs": tm, "api": api,
-          "manifest": [{"src": "TAAS " + t, "years": v["years"], "n": v["n"], "gaps": v["gaps"]} for t, v in taas.items()] + ([{"src": "TMACS 지자체별 사고지표", "years": tm["years"], "n": len(tm["rows"])}] if tm else []), "files": src}
+bundle = {"kind": "rlr-ext", "v": 1, "asof": today, "taas": main, "taasT": {t: v["pts"] for t, v in taas.items() if t != "지자체별"}, "tmacs": tm, "kma": kma, "api": api,
+          "manifest": [{"src": "TAAS " + t, "years": v["years"], "n": v["n"], "gaps": v["gaps"]} for t, v in taas.items()] + ([{"src": "TMACS 지자체별 사고지표", "years": tm["years"], "n": len(tm["rows"])}] if tm else []) + ([{"src": "기상청 ASOS 관측소 연간 지표", "years": kma["years"], "n": len(kma["rows"])}] if kma else []), "files": src}
 json.dump(bundle, open(os.path.join(OUT, "ext_bundle.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 man = {k: bundle[k] for k in ("asof", "manifest", "api")}
 json.dump(man, open(os.path.join(OUT, "manifest.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)

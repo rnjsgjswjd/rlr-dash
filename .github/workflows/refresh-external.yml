@@ -1,9 +1,7 @@
 name: refresh-external
-# 외부 데이터 정기 갱신: 매월 3일 03:00(한국시간) + 수동 실행
-#  1) TAAS API 점검(어떤 유형이 열려 있는지) 2) 열린 유형 최근 연도 수집 3) TMACS 수집 4) ext/ext_bundle.json 생성 → data 브랜치
+# 외부 데이터 초기 적재·재수집(수동 실행). 매달 갱신은 대시보드 ‘외부 데이터 → 값 붙여넣기’로 합니다.
+#  1) TAAS API 점검(어떤 유형이 열려 있는지) 2) 열린 유형 수집 3) 기상청 ASOS(침수·결빙 지표) 4) TMACS 5) ext/ext_bundle.json → data 브랜치
 on:
-  schedule:
-    - cron: "0 18 2 * *"
   workflow_dispatch:
     inputs:
       years:
@@ -15,6 +13,9 @@ on:
       tmacs:
         description: "TMACS도 다시 받기 (yes/no)"
         default: "yes"
+      kma:
+        description: "기상청 ASOS 연도 (예: 2019-2025, no = 건너뜀)"
+        default: "2019-2025"
 permissions:
   contents: write
 jobs:
@@ -50,6 +51,13 @@ jobs:
             tail -3 "log_${t}_${y}.txt" >> probe_log.txt
           done; done
           ls -la
+      - name: 기상청 ASOS (침수·결빙 지표)
+        if: ${{ inputs.kma != 'no' }}
+        env:
+          DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
+        run: |
+          K="${{ inputs.kma }}"; [ -z "$K" ] && K="2019-$(( $(date +%Y) - 1 ))"
+          python tools/kma_asos.py "$K" work/kma_asos_yearly.csv | tail -5 | tee work/kma_log.txt || true
       - name: TMACS 수집
         if: ${{ inputs.tmacs != 'no' }}
         run: python tools/tmacs_fetch.py > tmacs_log.txt 2>&1 || true; mkdir -p out; cp tmacs_log.txt out/ || true
@@ -60,6 +68,8 @@ jobs:
           mkdir -p pub/fz pub/ext
           for f in work/fz_auto_*.csv; do [ -f "$f" ] && [ "$(wc -l < "$f")" -gt 1 ] && cp "$f" pub/fz/; done
           cp work/api_status.json work/probe_log.txt pub/ext/ 2>/dev/null || true
+          mkdir -p pub/kma; cp work/kma_log.txt work/kma_asos_yearly.csv.status.json pub/kma/ 2>/dev/null || true
+          if [ -f work/kma_asos_yearly.csv ] && [ "$(wc -l < work/kma_asos_yearly.csv)" -gt 10 ]; then cp work/kma_asos_yearly.csv pub/kma/; fi
           if [ -f out/tmacs_jijace.csv ] && [ "$(wc -l < out/tmacs_jijace.csv)" -gt 3000 ]; then rm -rf pub/tmacs && cp -r out pub/tmacs; fi
           python tools/ext_build.py pub | tee -a pub/ext/probe_log.txt
           cd pub && git add -A && git commit -qm "외부 데이터 갱신 $(date +%Y-%m-%d)" || true
