@@ -46,9 +46,9 @@ jobs:
           ls dem | wc -l | tee -a log.txt
           gdalbuildvrt dem.vrt dem/*.tif
           XMIN=741111.0312999999; YMAX=2073441.1553000007; XMAX=$(python3 -c "print($XMIN+56791*10)"); YMIN=$(python3 -c "print($YMAX-61983*10)")
-          gdalwarp -q -t_srs EPSG:5179 -te $XMIN $YMIN $XMAX $YMAX -tr 90 90 -r average -dstnodata 0 -co COMPRESS=DEFLATE -multi -wo NUM_THREADS=ALL_CPUS dem.vrt dem90.tif
-          gdaldem hillshade dem90.tif hs90.tif -z 2.2 -multidirectional -compute_edges -q
-          /usr/bin/python3 ../tools/dem_hs.py hs90.tif dem90.tif hs.json 2>&1 | tee -a log.txt
+          gdalwarp -q -t_srs EPSG:5179 -te $XMIN $YMIN $XMAX $YMAX -tr 120 120 -r average -dstnodata 0 -co COMPRESS=DEFLATE -multi -wo NUM_THREADS=ALL_CPUS dem.vrt dem120.tif
+          gdaldem hillshade dem120.tif hs120.tif -z 2.6 -multidirectional -compute_edges -q
+          /usr/bin/python3 ../tools/dem_hs.py hs120.tif dem120.tif hs.json 2>&1 | tee -a log.txt
       - name: 합치기·저장 (data 브랜치)
         run: |
           cd bm

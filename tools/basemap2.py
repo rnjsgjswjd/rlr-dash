@@ -46,8 +46,11 @@ OV = {"fo": (12, 150000, 0), "ur": (4, 6000, 0), "wt": (3, 1500, 0), "rv": (2.5,
 T1S, T2S = 2000, 500
 ov, t1, t2, lb1, lb2 = {}, {}, {}, {}, {}
 stat = {}
+MARG = 0.3  # 화면 쪽에서 타일 크기의 30% 여유를 두고 불러오므로, 그 안에 들어오면 한 타일에만 저장(중복 줄이기)
 def put(store, size, layer, pts, d):
-    x0, y0, x1, y1 = bbox(pts)
+    x0, y0, x1, y1 = bbox(pts); ci, cj = int(((x0 + x1) / 2) // size), int(((y0 + y1) / 2) // size); m = size * MARG
+    if x0 >= ci * size - m and x1 <= (ci + 1) * size + m and y0 >= cj * size - m and y1 <= (cj + 1) * size + m:
+        store.setdefault("%d,%d" % (ci, cj), {}).setdefault(layer, []).append(d); return
     for i in range(int(x0 // size), int(x1 // size) + 1):
         for j in range(int(y0 // size), int(y1 // size) + 1):
             store.setdefault("%d,%d" % (i, j), {}).setdefault(layer, []).append(d)
@@ -87,7 +90,7 @@ with open(src, encoding="utf-8") as f:
                     d = enc(dp(pts, tol))
                     if d: ov.setdefault(lay, []).append(d)
             if lay in ("mi", "st"):
-                if (lay == "st" and L < 60) or (lay == "mi" and L < 4): continue
+                if lay == "st" or L < 4: continue  # 실개천은 용량 대비 효과가 작아 제외
                 d = enc(dp(pts, 1.0 if lay == "mi" else 1.4))
                 if d: put(t2, T2S, lay + ("T" if tun and lay == "mi" else ""), pts, d)
             else:
@@ -140,9 +143,28 @@ for store, size in ((lb1, T1S), (lb2, T2S)):
         store[k] = keep
 for (lv, tile, name), (L, rec) in roadlab.items():
     (lb1 if lv == "1" else lb2).setdefault(tile, []).append(rec)
-def join(store): return {k: {l: "".join(v) for l, v in d.items()} for k, d in store.items()}
+# 같은 층의 경로들을 가까운 것끼리 정렬하고, 두 번째부터는 상대 이동(m)으로 써서 용량 줄이기
+_RE = re.compile(r"M(-?\d+) (-?\d+)([^Mz]*)(z?)")
+_RL = re.compile(r"l(-?\d+) ?(-?\d+)")
+def rel(parts):
+    segs = []
+    for d in parts:
+        for m in _RE.finditer(d): segs.append((int(m.group(1)), int(m.group(2)), m.group(3), m.group(4)))
+    segs.sort(key=lambda t: (t[1] // 40, t[0] if (t[1] // 40) % 2 == 0 else -t[0]))
+    out, cx, cy = [], None, None
+    for x, y, body, z in segs:
+        if cx is None: out.append("M%d %d" % (x, y))
+        else: dx, dy = x - cx, y - cy; out.append("m%d%s%d" % (dx, " " if dy >= 0 else "", dy))
+        out.append(body + z)
+        if z: cx, cy = x, y
+        else:
+            px, py = x, y
+            for a, b in _RL.findall(body): px += int(a); py += int(b)
+            cx, cy = px, py
+    return "".join(out)
+def join(store): return {k: {l: rel(v) for l, v in d.items()} for k, d in store.items()}
 res = {"origin": [X0, Y1, U], "asof": asof, "attrib": "© OpenStreetMap contributors (ODbL)",
-       "layers": {k: "".join(v) for k, v in ov.items()},
+       "layers": {k: rel(v) for k, v in ov.items()},
        "T1": {"size": T1S, "tiles": join(t1)}, "T2": {"size": T2S, "tiles": join(t2)}, "L1": lb1, "L2": lb2}
 json.dump(res, open(out_fn, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 def sz(o): return len(json.dumps(o, ensure_ascii=False, separators=(",", ":")).encode()) // 1000
