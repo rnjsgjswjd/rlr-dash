@@ -1,0 +1,100 @@
+{
+ "asof": "2026-10-21",
+ "manifest": [
+  {
+   "src": "TAAS 지자체별",
+   "years": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "n": 3240,
+   "gaps": "원천(API)에 자료가 없는 연도·시도: 2024년 세종·울산, 2025년 광주·전남"
+  },
+  {
+   "src": "TMACS 지자체별 사고지표",
+   "years": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "n": 4809
+  }
+ ],
+ "api": {
+  "checked": "2026-10-21 16:00",
+  "year": "2025",
+  "types": {
+   "lg": {
+    "name": "지자체별",
+    "service": "frequentzoneLg",
+    "ok": true,
+    "code": "00",
+    "msg": "NORMAL_CODE",
+    "state": "사용 가능"
+   },
+   "freezing": {
+    "name": "결빙",
+    "service": "frequentzoneFreezing",
+    "ok": false,
+    "code": "30",
+    "msg": "등록되지 않은 서비스키",
+    "state": "활용신청 필요"
+   },
+   "oldman": {
+    "name": "보행노인",
+    "service": "frequentzoneOldman",
+    "ok": false,
+    "code": "30",
+    "msg": "등록되지 않은 서비스키",
+    "state": "활용신청 필요"
+   },
+   "child": {
+    "name": "보행어린이",
+    "service": "frequentzoneChild",
+    "ok": false,
+    "code": "30",
+    "msg": "등록되지 않은 서비스키",
+    "state": "활용신청 필요"
+   },
+   "bicycle": {
+    "name": "자전거",
+    "service": "frequentzoneBicycle",
+    "ok": false,
+    "code": "30",
+    "msg": "등록되지 않은 서비스키",
+    "state": "활용신청 필요"
+   },
+   "motorcycle": {
+    "name": "이륜차",
+    "service": "frequentzoneMotorcycle",
+    "ok": false,
+    "code": "12",
+    "msg": "해당 오픈API 서비스가 없거나 폐기됨",
+    "state": "오류"
+   },
+   "jaywalking": {
+    "name": "보행자무단횡단",
+    "service": "frequentzonePedstrians",
+    "ok": false,
+    "code": "12",
+    "msg": "해당 오픈API 서비스가 없거나 폐기됨",
+    "state": "오류"
+   },
+   "holiday": {
+    "name": "연휴기간",
+    "service": "frequentzoneHoliday",
+    "ok": false,
+    "code": "12",
+    "msg": "해당 오픈API 서비스가 없거나 폐기됨",
+    "state": "오류"
+   }
+  }
+ }
+}

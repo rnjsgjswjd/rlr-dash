@@ -1,0 +1,16 @@
+lg 지자체별 00 NORMAL_CODE
+freezing 결빙 30 등록되지 않은 서비스키
+oldman 보행노인 30 등록되지 않은 서비스키
+child 보행어린이 30 등록되지 않은 서비스키
+bicycle 자전거 30 등록되지 않은 서비스키
+motorcycle 이륜차 12 해당 오픈API 서비스가 없거나 폐기됨
+jaywalking 보행자무단횡단 12 해당 오픈API 서비스가 없거나 폐기됨
+holiday 연휴기간 12 해당 오픈API 서비스가 없거나 폐기됨
+AVAILABLE lg
+years=2025 types=lg
+
+완료: /home/runner/work/rlr-dash/rlr-dash/work/fz_auto_lg_2025.csv
+지점 590건 · 호출 270회 → 대시보드 [BETA TEST > 사고다발지역 > 외부 데이터 불러오기]로 넣으세요.
+TAAS 지자체별 [2021, 2022, 2023, 2024, 2025] 3240
+TMACS [2019, 2020, 2021, 2022, 2023, 2024, 2025] 4809
+bundle 678681 bytes
