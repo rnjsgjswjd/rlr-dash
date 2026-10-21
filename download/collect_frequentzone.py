@@ -25,6 +25,10 @@ TYPES = {  # 유형코드: (서비스명, 오퍼레이션명, 한글 이름)
     "freezing": ("frequentzoneFreezing", "getRestFrequentzoneFreezing", "결빙"),
     "oldman": ("frequentzoneOldman", "getRestFrequentzoneOldman", "보행노인"),
     "child": ("frequentzoneChild", "getRestFrequentzoneChild", "보행어린이"),
+    "bicycle": ("frequentzoneBicycle", "getRestFrequentzoneBicycle", "자전거"),
+    "motorcycle": ("frequentzoneMotorcycle", "getRestFrequentzoneMotorcycle", "이륜차"),
+    "jaywalking": ("frequentzonePedstrians", "getRestFrequentzonePedstrians", "보행자무단횡단"),
+    "holiday": ("frequentzoneHoliday", "getRestFrequentzoneHoliday", "연휴기간"),
 }
 OUT_COLS = ["유형", "연도", "시도코드", "구군코드", "시군구", "지점명", "위도", "경도", "발생건수", "사상자수", "사망자수", "중상자수", "경상자수", "부상신고자수", "다발지역ID", "법정동코드"]
 

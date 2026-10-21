@@ -1,0 +1,66 @@
+name: refresh-external
+# 외부 데이터 정기 갱신: 매월 3일 03:00(한국시간) + 수동 실행
+#  1) TAAS API 점검(어떤 유형이 열려 있는지) 2) 열린 유형 최근 연도 수집 3) TMACS 수집 4) ext/ext_bundle.json 생성 → data 브랜치
+on:
+  schedule:
+    - cron: "0 18 2 * *"
+  workflow_dispatch:
+    inputs:
+      years:
+        description: "TAAS 수집 연도 (auto = 작년·재작년)"
+        default: "auto"
+      types:
+        description: "TAAS 유형 (auto = 점검에서 열린 유형 전부, 예: lg freezing)"
+        default: "auto"
+      tmacs:
+        description: "TMACS도 다시 받기 (yes/no)"
+        default: "yes"
+permissions:
+  contents: write
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - name: 법정동 코드표
+        run: |
+          mkdir -p work && cp download/collect_frequentzone.py work/
+          pip install -q PublicDataReader
+          python - <<'PY'
+          import PublicDataReader as pdr
+          df = pdr.code_bdong()
+          with open("work/법정동코드 전체자료.txt", "w", encoding="utf-8") as f:
+              f.write("법정동코드\t법정동명\t폐지여부\n")
+              for _, r in df.iterrows():
+                  dead = str(r["말소일자"]).strip()
+                  f.write(f"{r['법정동코드']}\t{r['시도명']} {r['시군구명']} {r['읍면동명']}\t{'존재' if dead in ('', 'nan', 'None') else '폐지'}\n")
+          PY
+      - name: TAAS API 점검 · 수집
+        env:
+          DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
+        run: |
+          cd work
+          python ../tools/taas_probe.py api_status.json | tee probe_log.txt
+          Y="${{ inputs.years }}"; [ -z "$Y" -o "$Y" = "auto" ] && Y="$(( $(date +%Y) - 1 )) $(( $(date +%Y) - 2 ))"
+          T="${{ inputs.types }}"; [ -z "$T" -o "$T" = "auto" ] && T="$(grep '^AVAILABLE' probe_log.txt | cut -d' ' -f2-)"
+          echo "years=$Y types=$T" | tee -a probe_log.txt
+          for t in $T; do for y in $Y; do
+            python collect_frequentzone.py --years $y --types $t --out "fz_auto_${t}_${y}.csv" > "log_${t}_${y}.txt" 2>&1 || true
+            tail -3 "log_${t}_${y}.txt" >> probe_log.txt
+          done; done
+          ls -la
+      - name: TMACS 수집
+        if: ${{ inputs.tmacs != 'no' }}
+        run: python tools/tmacs_fetch.py > tmacs_log.txt 2>&1 || true; mkdir -p out; cp tmacs_log.txt out/ || true
+      - name: 묶음 만들기 · data 브랜치 저장
+        run: |
+          git config --global user.name bot; git config --global user.email bot@users.noreply.github.com
+          git clone -q --branch data --depth 1 "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" pub
+          mkdir -p pub/fz pub/ext
+          for f in work/fz_auto_*.csv; do [ -f "$f" ] && [ "$(wc -l < "$f")" -gt 1 ] && cp "$f" pub/fz/; done
+          cp work/api_status.json work/probe_log.txt pub/ext/ 2>/dev/null || true
+          if [ -f out/tmacs_jijace.csv ] && [ "$(wc -l < out/tmacs_jijace.csv)" -gt 3000 ]; then rm -rf pub/tmacs && cp -r out pub/tmacs; fi
+          python tools/ext_build.py pub | tee -a pub/ext/probe_log.txt
+          cd pub && git add -A && git commit -qm "외부 데이터 갱신 $(date +%Y-%m-%d)" || true
+          git push "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" data
